@@ -24,7 +24,7 @@ Options.SoundAlertsEnabled = true,
 // If true, then text-to-speech alerts are read aloud.  Text-to-speech takes
 // priority over custom sounds and text noises.  If a trigger does not have
 // a tts entry then it will fall back on text and sound (if turned on).
-Options.SpokenAlertsEnabled = false;
+Options.SpokenAlertsEnabled = true;
 
 
 // Show timer bars for events that will happen in this many seconds or less.
@@ -198,11 +198,11 @@ Options.PerTriggerOptions = {
   // and /laugh at a striking dummy.  It will use these settings and moo.
   'Test Laugh': {
     // Play the text to speech.
-    SpeechAlert: false,
+    SpeechAlert: true,
     // Play the sound alert.
     SoundAlert: true,
     // Show the info/alert/alarm text on screen.
-    TextAlert: false,
+    TextAlert: true,
     // Play this sound (replacing any sound from the original).
     SoundOverride: '../../resources/sounds/WeakAuras/CowMooing.ogg',
     // Play the sound (if any) at this volume.
@@ -221,7 +221,7 @@ Options.PerTriggerOptions = {
     },
   },
 
-  // Normally, /laugh-ing at a striking dummy has alarm text.  This
+  /*// Normally, /laugh-ing at a striking dummy has alarm text.  This
   // overrides the alarm text and also outputs alert and info text,
   // and only runs if you are a tank.
   'Test Laugh': {
@@ -232,5 +232,5 @@ Options.PerTriggerOptions = {
     AlertText: 'HAHA',
     InfoText: 'HAHAHA',
     TTSText: '',
-  },
+  },*/
 };

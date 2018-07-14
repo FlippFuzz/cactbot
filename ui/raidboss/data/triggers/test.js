@@ -1,7 +1,7 @@
 'use strict';
 
 [{
-  zoneRegex: /^Middle La Noscea$/,
+  zoneRegex: /^Shirogan$/,
   timelineFile: 'test.txt',
   // timeline here is additions to the timeline.  They can
   // be strings, or arrays of strings, or functions that
