@@ -15,11 +15,6 @@
         de: 'Pistole: Stack',
         fr: 'Pistolet : Pack',
       },
-	  tts: {
-        en: 'Nightfall Stack',
-        de: 'Nightfall Stack',
-        fr: 'Nightfall Stack',
-      },
     },
     {
       id: 'Tsukuyomi Nightfall Spear',
@@ -30,11 +25,6 @@
         en: 'Spear: Spread',
         de: 'Speer: Verteilen',
         fr: 'Lance : Ecartez-vous',
-      },
-	  tts: {
-        en: 'Nightfall Spread',
-        de: 'Nightfall Spread',
-        fr: 'Nightfall Spread',
       },
     },
     {
@@ -121,19 +111,11 @@
       regexFr: / 14:2BDA:Tsukuyomi starts using Lame Ténébreuse/,
       infoText: function(data) {
         return {
-          en: 'D + ' + data.moonInOut,
+          en: 'Left + ' + data.moonInOut,
           fr: 'Gauche + ' + data.moonInOut,
           de: 'Links + ' + data.moonInOut,
         };
       },
-      tts: function(data, matches) {
-        if (data.role == 'tank' || data.role == 'healer') {
-          return {
-            en: 'D ' + data.moonInOut,
-            de: 'D ' + data.moonInOut,
-            fr: 'D ' + data.moonInOut,
-          };
-        }
     },
     {
       id: 'Tsukuyomi Bright Blade',
@@ -142,19 +124,11 @@
       regexFr: / 14:2BDB:Tsukuyomi starts using Lame Blafarde/,
       infoText: function(data) {
         return {
-          en: 'B + ' + data.moonInOut,
+          en: 'Right + ' + data.moonInOut,
           fr: 'Droite + ' + data.moonInOut,
           de: 'Rechts + ' + data.moonInOut,
         };
       },
-	  tts: function(data, matches) {
-        if (data.role == 'tank' || data.role == 'healer') {
-          return {
-            en: 'B ' + data.moonInOut,
-            de: 'B ' + data.moonInOut,
-            fr: 'B ' + data.moonInOut,
-          };
-        }
     },
     {
       id: 'Tsukuyomi Meteor Marker',
@@ -470,7 +444,7 @@
         'Perilune': '月天心',
         'Reprimand': '折檻',
         'Steel Of The Underworld': '黄泉の穂先',
-        'Supreme Selenomancy': '極の月読 ',
+        'Supreme Selenomancy': '極の月読 ',
         'Torment Unto Death': 'なぶり殺し',
         'Tsuki-no-Kakera': '月の欠片',
         'Tsuki-no-Maiogi': '月の舞扇',
