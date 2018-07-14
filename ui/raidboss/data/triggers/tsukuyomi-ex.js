@@ -11,9 +11,14 @@
       regexDe: / 14:2BBC:Tsukuyomi starts using Einbruch Der Dunkelheit/,
       regexFr: / 14:2BBC:Tsukuyomi starts using Jeune Nuit/,
       alertText: {
-        en: 'Gun: Stack',
+        en: 'Nightfall: Stack',
         de: 'Pistole: Stack',
         fr: 'Pistolet : Pack',
+      },
+	  tts: {
+        en: 'Nightfall Stack',
+        de: 'Nightfall Stack',
+        fr: 'Nightfall Stack',
       },
     },
     {
@@ -25,6 +30,11 @@
         en: 'Spear: Spread',
         de: 'Speer: Verteilen',
         fr: 'Lance : Ecartez-vous',
+      },
+	  tts: {
+        en: 'Nightfall Spread',
+        de: 'Nightfall Spread',
+        fr: 'Nightfall Spread',
       },
     },
     {
@@ -111,10 +121,19 @@
       regexFr: / 14:2BDA:Tsukuyomi starts using Lame Ténébreuse/,
       infoText: function(data) {
         return {
-          en: 'Left + ' + data.moonInOut,
-          fr: 'Gauche + ' + data.moonInOut,
-          de: 'Links + ' + data.moonInOut,
+          en: 'D + ' + data.moonInOut,
+          fr: 'D + ' + data.moonInOut,
+          de: 'D + ' + data.moonInOut,
         };
+      },
+      tts: function(data, matches) {
+        if (data.role == 'tank' || data.role == 'healer') {
+          return {
+			en: 'Delta + ' + data.moonInOut,
+			fr: 'Delta + ' + data.moonInOut,
+			de: 'Delta + ' + data.moonInOut,
+          };
+        }
       },
     },
     {
@@ -124,11 +143,20 @@
       regexFr: / 14:2BDB:Tsukuyomi starts using Lame Blafarde/,
       infoText: function(data) {
         return {
-          en: 'Right + ' + data.moonInOut,
-          fr: 'Droite + ' + data.moonInOut,
-          de: 'Rechts + ' + data.moonInOut,
+          en: 'B + ' + data.moonInOut,
+          fr: 'B + ' + data.moonInOut,
+          de: 'B + ' + data.moonInOut,
         };
-      },
+	  },
+      tts: function(data, matches) {
+        if (data.role == 'tank' || data.role == 'healer') {
+          return {
+			en: 'Bravo + ' + data.moonInOut,
+			fr: 'Bravo + ' + data.moonInOut,
+			de: 'Bravo + ' + data.moonInOut,
+          };
+        }
+      },	  
     },
     {
       id: 'Tsukuyomi Meteor Marker',
