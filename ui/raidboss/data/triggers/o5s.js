@@ -44,7 +44,7 @@
       tts: function(data, matches) {
         if (matches[1] == data.me) {
           return {
-            en: 'buster',
+            en: 'Tank Buster',
             de: 'basta',
             fr: 'tankbuster',
           };
@@ -66,7 +66,7 @@
       },
       tts: function(data) {
         return {
-          en: 'run away',
+          en: 'Go to back',
           de: 'ab nach hinten',
           fr: 'S\'éloigner',
         };
@@ -127,6 +127,11 @@
           fr: 'Fantôme soufflant',
         };
       },
+	  tts: {
+        en: 'Knockback Ghost',
+        de: 'Knockback Ghost',
+        fr: 'Knockback Ghost',
+      },
     },
   ],
   timelineReplace: [
@@ -149,7 +154,7 @@
         'Enrage': 'Finalangriff',
 
         'Acid Rain': 'Säureregen',
-        'All In The Mind': 'Psychokinese',
+        'Knockback Ghost': 'Psychokinese',
         'Diabolic Chimney': 'Diabolischer Schlot',
         'Diabolic Headlamp': 'Diabolische Leuchte',
         'Diabolic Light': 'Diabolisches Licht',
@@ -198,7 +203,7 @@
         'Enrage': 'Enrage',
 
         'Acid Rain': 'Pluie Acide',
-        'All In The Mind': 'Force De Volonté',
+        'Knockback Ghost': 'Force De Volonté',
         'Diabolic Chimney': 'Cheminée Diabolique',
         'Diabolic Headlamp': 'Phare Diabolique',
         'Diabolic Light': 'Lueur Diabolique',
@@ -238,7 +243,7 @@
       },
       'replaceText': {
         'Acid Rain': '酸性雨',
-        'All In The Mind': '念力',
+        'Knockback Ghost': '念力',
         'Diabolic Chimney': '魔界の噴煙',
         'Diabolic Headlamp': '魔界の前照灯',
         'Diabolic Light': '魔界の光',
