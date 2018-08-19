@@ -12,6 +12,7 @@ let Options = {
       mapImage: 'anemos.png',
       mapWidth: 1300,
       mapHeight: 950,
+      primaryWeather: ['Gales'],
       // TODO: these could be a little better tuned :C
       mapToPixelXScalar: 41.12,
       mapToPixelXConstant: -224.7,
@@ -473,15 +474,413 @@ let Options = {
         },
       },
     },
+    'Eureka Pagos': {
+      mapImage: 'pagos.png',
+      mapWidth: 1500,
+      mapHeight: 950,
+      primaryWeather: ['Blizzards', 'Thunder', 'Fog'],
+      mapToPixelXScalar: 41.08333,
+      mapToPixelXConstant: -85.28333,
+      mapToPixelYScalar: 41.09158,
+      mapToPixelYConstant: -370.196,
+      entityToMapXScalar: 0.02,
+      entityToMapXConstant: 21.48,
+      entityToMapYScalar: 0.02,
+      entityToMapYConstant: 21.48,
+      nms: {
+        snowqueen: {
+          label: {
+            en: 'Queen',
+            de: 'Snow Queen',
+            fr: 'Snow Queen',
+            ja: 'Snow Queen',
+          },
+          mobName: {
+            en: 'The Snow Queen',
+            de: 'The Snow Queen',
+            fr: 'The Snow Queen',
+            ja: 'The Snow Queen',
+          },
+          trackerName: {
+            en: 'Snow Queen',
+            de: 'Snow Queen',
+            fr: 'Snow Queen',
+            ja: 'Snow Queen',
+          },
+          x: 21.5,
+          y: 26.5,
+        },
+        taxim: {
+          label: {
+            en: 'Taxim',
+            de: 'Taxim',
+            fr: 'Taxim',
+            ja: 'Taxim',
+          },
+          mobName: {
+            en: 'Taxim',
+            de: 'Taxim',
+            fr: 'Taxim',
+            ja: 'Taxim',
+          },
+          trackerName: {
+            en: 'Taxim',
+            de: 'Taxim',
+            fr: 'Taxim',
+            ja: 'Taxim',
+          },
+          x: 25.5,
+          y: 28.3,
+          time: 'Night',
+        },
+        ashdragon: {
+          label: {
+            en: 'Dragon',
+            de: 'Ash Dragon',
+            fr: 'Ash Dragon',
+            ja: 'Ash Dragon',
+          },
+          mobName: {
+            en: 'Ash Dragon',
+            de: 'Ash Dragon',
+            fr: 'Ash Dragon',
+            ja: 'Ash Dragon',
+          },
+          trackerName: {
+            en: 'Ash Dragon',
+            de: 'Ash Dragon',
+            fr: 'Ash Dragon',
+            ja: 'Ash Dragon',
+          },
+          x: 29.7,
+          y: 30.0,
+        },
+        glavoid: {
+          label: {
+            en: 'Glavoid',
+            de: 'Glavoid',
+            fr: 'Glavoid',
+            ja: 'Glavoid',
+          },
+          mobName: {
+            en: 'Glavoid',
+            de: 'Glavoid',
+            fr: 'Glavoid',
+            ja: 'Glavoid',
+          },
+          trackerName: {
+            en: 'Glavoid',
+            de: 'Glavoid',
+            fr: 'Glavoid',
+            ja: 'Glavoid',
+          },
+          x: 33.0,
+          y: 28.0,
+        },
+        anapos: {
+          label: {
+            en: 'Anapos',
+            de: 'Anapos',
+            fr: 'Anapos',
+            ja: 'Anapos',
+          },
+          mobName: {
+            en: 'Anapos',
+            de: 'Anapos',
+            fr: 'Anapos',
+            ja: 'Anapos',
+          },
+          trackerName: {
+            en: 'Anapos',
+            de: 'Anapos',
+            fr: 'Anapos',
+            ja: 'Anapos',
+          },
+          x: 33.0,
+          y: 21.5,
+          weather: 'Fog',
+        },
+        hakutaku: {
+          label: {
+            en: 'Haku',
+            de: 'Hakutaku',
+            fr: 'Hakutaku',
+            ja: 'Hakutaku',
+          },
+          mobName: {
+            en: 'Hakutaku',
+            de: 'Hakutaku',
+            fr: 'Hakutaku',
+            ja: 'Hakutaku',
+          },
+          trackerName: {
+            en: 'Hakutaku',
+            de: 'Hakutaku',
+            fr: 'Hakutaku',
+            ja: 'Hakutaku',
+          },
+          x: 29.0,
+          y: 22.5,
+        },
+        igloo: {
+          label: {
+            en: 'Igloo',
+            de: 'Igloo',
+            fr: 'Igloo',
+            ja: 'Igloo',
+          },
+          mobName: {
+            en: 'King Igloo',
+            de: 'King Igloo',
+            fr: 'King Igloo',
+            ja: 'King Igloo',
+          },
+          trackerName: {
+            en: 'Igloo',
+            de: 'Igloo',
+            fr: 'Igloo',
+            ja: 'Igloo',
+          },
+          x: 17,
+          y: 16,
+        },
+        asag: {
+          label: {
+            en: 'Asag',
+            de: 'Asag',
+            fr: 'Asag',
+            ja: 'Asag',
+          },
+          mobName: {
+            en: 'Asag',
+            de: 'Asag',
+            fr: 'Asag',
+            ja: 'Asag',
+          },
+          trackerName: {
+            en: 'Asag',
+            de: 'Asag',
+            fr: 'Asag',
+            ja: 'Asag',
+          },
+          x: 11.3,
+          y: 10.5,
+        },
+        surabhi: {
+          label: {
+            en: 'Surabhi',
+            de: 'Surabhi',
+            fr: 'Surabhi',
+            ja: 'Surabhi',
+          },
+          mobName: {
+            en: 'Surabhi',
+            de: 'Surabhi',
+            fr: 'Surabhi',
+            ja: 'Surabhi',
+          },
+          trackerName: {
+            en: 'Surabhi',
+            de: 'Surabhi',
+            fr: 'Surabhi',
+            ja: 'Surabhi',
+          },
+          x: 10.5,
+          y: 20.5,
+        },
+        kingarthro: {
+          label: {
+            en: 'Arthro',
+            de: 'King Arthro',
+            fr: 'King Arthro',
+            ja: 'King Arthro',
+          },
+          mobName: {
+            en: 'King Arthro',
+            de: 'King Arthro',
+            fr: 'King Arthro',
+            ja: 'King Arthro',
+          },
+          trackerName: {
+            en: 'King Arthro',
+            de: 'King Arthro',
+            fr: 'King Arthro',
+            ja: 'King Arthro',
+          },
+          x: 8.0,
+          y: 15.2,
+        },
+        minotaurs: {
+          label: {
+            en: 'Minotaurs',
+            de: 'Minotaurs',
+            fr: 'Minotaurs',
+            ja: 'Minotaurs',
+          },
+          mobName: {
+            en: 'Mindertaur',
+            de: 'Mindertaur',
+            fr: 'Mindertaur',
+            ja: 'Mindertaur',
+          },
+          trackerName: {
+            en: 'Minotaurs',
+            de: 'Minotaurs',
+            fr: 'Minotaurs',
+            ja: 'Minotaurs',
+          },
+          x: 13.8,
+          y: 18.4,
+        },
+        holycow: {
+          label: {
+            en: 'Holy Cow',
+            de: 'Holy Cow',
+            fr: 'Holy Cow',
+            ja: 'Holy Cow',
+          },
+          mobName: {
+            en: 'Holy Cow',
+            de: 'Holy Cow',
+            fr: 'Holy Cow',
+            ja: 'Holy Cow',
+          },
+          trackerName: {
+            en: 'Holy Cow',
+            de: 'Holy Cow',
+            fr: 'Holy Cow',
+            ja: 'Holy Cow',
+          },
+          x: 26,
+          y: 16,
+        },
+        hadhayosh: {
+          label: {
+            en: 'Hadha',
+            de: 'Hadhayosh',
+            fr: 'Hadhayosh',
+            ja: 'Hadhayosh',
+          },
+          mobName: {
+            en: 'Hadhayosh',
+            de: 'Hadhayosh',
+            fr: 'Hadhayosh',
+            ja: 'Hadhayosh',
+          },
+          trackerName: {
+            en: 'Hadhayosh',
+            de: 'Hadhayosh',
+            fr: 'Hadhayosh',
+            ja: 'Hadhayosh',
+          },
+          weather: 'Thunder',
+          x: 30,
+          y: 19,
+        },
+        horus: {
+          label: {
+            en: 'Horus',
+            de: 'Horus',
+            fr: 'Horus',
+            ja: 'Horus',
+          },
+          mobName: {
+            en: 'Eye of Horus',
+            de: 'Eye of Horus',
+            fr: 'Eye of Horus',
+            ja: 'Eye of Horus',
+          },
+          trackerName: {
+            en: 'Horus',
+            de: 'Horus',
+            fr: 'Horus',
+            ja: 'Horus',
+          },
+          weather: 'Heat Waves',
+          x: 26,
+          y: 20,
+        },
+        mainyu: {
+          label: {
+            en: 'Mainyu',
+            de: 'Mainyu',
+            fr: 'Mainyu',
+            ja: 'Mainyu',
+          },
+          mobName: {
+            en: 'Arch Angra Mainyu',
+            de: 'Arch Angra Mainyu',
+            fr: 'Arch Angra Mainyu',
+            ja: 'Arch Angra Mainyu',
+          },
+          trackerName: {
+            en: 'Mainyu',
+            de: 'Mainyu',
+            fr: 'Mainyu',
+            ja: 'Mainyu',
+          },
+          x: 25,
+          y: 24,
+        },
+        cassie: {
+          label: {
+            en: 'Cassie',
+            de: 'Cassie',
+            fr: 'Cassie',
+            ja: 'Cassie',
+          },
+          mobName: {
+            en: 'Copycat Cassie',
+            de: 'Copycat Cassie',
+            fr: 'Copycat Cassie',
+            ja: 'Copycat Cassie',
+          },
+          trackerName: {
+            en: 'Cassie',
+            de: 'Cassie',
+            fr: 'Cassie',
+            ja: 'Cassie',
+          },
+          weather: 'Blizzards',
+          x: 22,
+          y: 14,
+        },
+        louhi: {
+          label: {
+            en: 'Louhi',
+            de: 'Louhi',
+            fr: 'Louhi',
+            ja: 'Louhi',
+          },
+          mobName: {
+            en: 'Louhi',
+            de: 'Louhi',
+            fr: 'Louhi',
+            ja: 'Louhi',
+          },
+          trackerName: {
+            en: 'Louhi',
+            de: 'Louhi',
+            fr: 'Louhi',
+            ja: 'Louhi',
+          },
+          x: 36,
+          y: 18.5,
+        },
+      },
+    },
   },
 };
 
 let gFlagRegex = Regexes.Parse(/00:00..:(.*)Eureka (?:Anemos|Pagos) \( (\y{Float})\s*, (\y{Float}) \)(.*$)/);
 let gTrackerRegex = Regexes.Parse(/(?:https:\/\/)?ffxiv-eureka\.com\/(\S*)\/?/);
-let gImportRegex = Regexes.Parse(/00:00..:(.*)★ NMs on cooldown: (\S.*\))/);
-let gGalesIcon = '&#x1F300;';
+let gImportRegex = Regexes.Parse(/00:00..:(.*)NMs on cooldown: (\S.*\))/);
 let gWeatherIcons = {
-  Gales: gGalesIcon,
+  'Gales': '&#x1F300;',
+  'Fog': '&#x2601;',
+  'Blizzards': '&#x2744;',
+  'Thunder': '&#x26A1;',
+  'Heat Waves': '&#x2600;',
 };
 let gNightIcon = '&#x1F319;';
 let gDayIcon = '&#x2600;';
@@ -496,6 +895,11 @@ class EurekaTracker {
   }
 
   SetStyleFromMap(style, mx, my) {
+    if (mx === undefined) {
+      style.display = 'none';
+      return;
+    }
+
     let zi = this.zoneInfo;
     let px = zi.mapToPixelXScalar * mx + zi.mapToPixelXConstant;
     let py = zi.mapToPixelYScalar * my + zi.mapToPixelYConstant;
@@ -568,6 +972,8 @@ class EurekaTracker {
 
   OnZoneChange(e) {
     this.zoneName = e.detail.zoneName;
+    if (this.zoneName == 'Unknown Zone (2Fb)')
+      this.zoneName = 'Eureka Pagos';
     this.zoneInfo = this.options.ZoneInfo[this.zoneName];
     let container = document.getElementById('container');
     if (this.zoneInfo) {
@@ -623,26 +1029,33 @@ class EurekaTracker {
   UpdateTimes() {
     let nowMs = +new Date();
 
-    let galesStr = gGalesIcon;
-    let weather = getWeather(nowMs, this.zoneName);
-    if (weather == 'Gales') {
-      let galesStopTime = findNextWeatherNot(nowMs, this.zoneName, 'Gales');
-      if (galesStopTime) {
-        let galesMin = (galesStopTime - nowMs) / 1000 / 60;
-        galesStr += ' for ' + Math.ceil(galesMin) + 'm';
-      } else {
-        galesStr += ' for ???';
+    for (let i = 0; i < 5; ++i) {
+      let primaryWeather = this.options.ZoneInfo[this.zoneName].primaryWeather[i];
+      if (!primaryWeather) {
+        document.getElementById('label-weather' + i).innerHTML = '';
+        continue;
       }
-    } else {
-      let galesStartTime = findNextWeather(nowMs, this.zoneName, 'Gales');
-      if (galesStartTime) {
-        let galesMin = (galesStartTime - nowMs) / 1000 / 60;
-        galesStr += ' in ' + Math.ceil(galesMin) + 'm';
+      let weatherStr = gWeatherIcons[primaryWeather];
+      let weather = getWeather(nowMs, this.zoneName);
+      if (weather == primaryWeather) {
+        let stopTime = findNextWeatherNot(nowMs, this.zoneName, primaryWeather);
+        if (stopTime) {
+          let min = (stopTime - nowMs) / 1000 / 60;
+          weatherStr += ' for ' + Math.ceil(min) + 'm';
+        } else {
+          weatherStr += ' for ???';
+        }
       } else {
-        galesStr += ' in ???';
+        let startTime = findNextWeather(nowMs, this.zoneName, primaryWeather);
+        if (startTime) {
+          let min = (startTime - nowMs) / 1000 / 60;
+          weatherStr += ' in ' + Math.ceil(min) + 'm';
+        } else {
+          weatherStr += ' in ???';
+        }
       }
+      document.getElementById('label-weather' + i).innerHTML = weatherStr;
     }
-    document.getElementById('label-gales').innerHTML = galesStr;
 
     let nextDay = findNextNight(nowMs);
     let nextNight = findNextDay(nowMs);

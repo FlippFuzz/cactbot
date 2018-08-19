@@ -51,9 +51,11 @@ triggers/a12s.js
 triggers/byakko-ex.js
 triggers/drowned_city_of_skalla.js
 triggers/eureka_anemos.js
+triggers/eureka_pagos.js
 triggers/fractal_continuum_hard.js
 triggers/general.js
 triggers/lakshmi-ex.js
+triggers/rathalos-ex.js
 triggers/ravana-ex.js
 triggers/sephirot-ex.js
 triggers/shinryu-ex.js
