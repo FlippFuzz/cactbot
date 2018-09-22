@@ -20,7 +20,7 @@ def load_timeline(timeline):
             clean_line = line.split('#')[0]
 
             # Split the line into sections
-            match = re.search(r'^(?P<time>\d+)\s+"(?P<label>[^"]+)"\s+(?P<options>.+)', clean_line)
+            match = re.search(r'^(?P<time>[\d\.]+)\s+"(?P<label>[^"]+)"\s+(?P<options>.+)', clean_line)
             if not match:
                 continue
 
@@ -244,7 +244,7 @@ def check_event(event, timelist, state):
                 timeline_position <= entry['end']
         ):
             # Flag with current branch
-            if state['last_entry'] == entry:
+            if state['last_entry'] == entry and time_progress_seconds < 2.5:
                 continue
 
             entry['branch'] = state['branch']
