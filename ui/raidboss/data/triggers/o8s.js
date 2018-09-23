@@ -22,7 +22,7 @@
         de: 'Auf Rückstoß achten',
       },
       tts: {
-        en: 'knockback',
+        en: 'KnockBack',
         fr: 'Projection',
         de: 'Rückstoß',
       },
@@ -39,7 +39,7 @@
         de: 'Von Statue wegschauen',
       },
       tts: {
-        en: 'look away',
+        en: 'Look Away',
         fr: 'Ne regardez pas la statue',
         de: 'weckschauen',
       },
@@ -56,7 +56,7 @@
         de: '<= Nach Links/Westen',
       },
       tts: {
-        en: 'left',
+        en: 'Move Left',
         fr: 'gauche',
         de: 'links',
       },
@@ -73,7 +73,7 @@
         de: 'Nach Rechts/Westen =>',
       },
       tts: {
-        en: 'right',
+        en: 'Move Right',
         fr: 'Projection depuis le côté droit',
         de: 'rechts',
       },
@@ -90,7 +90,7 @@
         de: 'Statue anschauen',
       },
       tts: {
-        en: 'look towards',
+        en: 'Look at Statue',
         fr: 'Regardez la statue',
         de: 'anschauen',
       },
@@ -107,7 +107,7 @@
         de: 'Vergangenheit: Sammeln und Stehenbleiben',
       },
       tts: {
-        en: 'stack and stay',
+        en: 'Stack and Stay',
         fr: 'Stack et rester-là',
         de: 'Stek und Stehenbleiben',
       },
@@ -124,7 +124,7 @@
         de: 'Zukunft: Sammeln und Durchlaufen',
       },
       tts: {
-        en: 'stack and through',
+        en: 'Stack and Through',
         fr: 'Stack et traversez',
         de: 'Stek und durchlaufen',
       },
@@ -184,7 +184,7 @@
         de: 'Rückstoß auf DIR',
       },
       tts: {
-        en: 'knockback',
+        en: 'Knockback on You',
         fr: 'Projection',
         de: 'Rückstoß',
       },
@@ -290,7 +290,7 @@
           return;
 
         return {
-          en: 'Hyperdrive on YOU',
+          en: 'Tank Buster',
           fr: 'Colonne de feu sur VOUS',
           de: 'Hyperantrieb auf DIR',
         };
@@ -310,7 +310,7 @@
       tts: function(data, matches) {
         if (matches[1] == data.me || data.role == 'healer' || data.role == 'tank') {
           return {
-            en: 'hyperdrive',
+            en: 'Tank Buster',
             fr: 'Colonne de feu',
             de: 'hyperantrieb',
           };
@@ -332,7 +332,7 @@
         de: 'Konfusion: Nach außen',
       },
       tts: {
-        en: 'confusion',
+        en: 'Confusion',
         fr: 'Confusion, aller à l\'extérieur',
         de: 'konfusion',
       },
@@ -352,7 +352,7 @@
         de: 'Schlaf: Zur Mitte',
       },
       tts: {
-        en: 'sleep',
+        en: 'Sleep',
         fr: 'Sommeil',
         de: 'Schlaf',
       },
@@ -446,7 +446,7 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastThunder = {
-          en: 'True Thunder',
+          en: 'Go to Empty Square',
           fr: 'Vraie foudre',
           de: 'Wahrer Blitz',
         }[data.lang];
@@ -470,7 +470,7 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastThunder = {
-          en: 'Fake Thunder',
+          en: 'Go to Intersect',
           fr: 'Fausse foudre',
           de: 'Falscher Blitz',
         }[data.lang];
@@ -494,12 +494,12 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastIce = {
-          en: 'Fake Ice',
+          en: 'Move Away from Boss',
           fr: 'Fausse glace',
           de: 'Falsches Eis',
         }[data.lang];
         data.lastIceDir = {
-          en: 'Get Out',
+          en: 'Move Away from Boss',
           fr: 'sortir',
           de: 'raus da',
         }[data.lang];
@@ -523,12 +523,12 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastIce = {
-          en: 'True Ice',
+          en: 'Stay in near Boss',
           fr: 'Vraie glace',
           de: 'Wahres Eis',
         }[data.lang];
         data.lastIceDir = {
-          en: 'Get In',
+          en: 'Stay in near Boss',
           fr: 'rentrer dedans',
           de: 'reingehen',
         }[data.lang];
@@ -552,12 +552,12 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastIce = {
-          en: 'Fake Ice',
+          en: 'Stay in near Boss',
           fr: 'Fausse glace',
           de: 'Falsches Eis',
         }[data.lang];
         data.lastIceDir = {
-          en: 'Get In',
+          en: 'Stay in near Boss',
           fr: 'rentrer dedans',
           de: 'reingehen',
         }[data.lang];
@@ -581,12 +581,12 @@
       suppressSeconds: 40,
       preRun: function(data) {
         data.lastIce = {
-          en: 'True Ice',
+          en: 'Move Away from Boss',
           fr: 'Vraie glace',
           de: 'Wahres Eis',
         }[data.lang];
         data.lastIceDir = {
-          en: 'Get Out',
+          en: 'Move Away from Boss',
           fr: 'sortir',
           de: 'rausgehen',
         }[data.lang];
