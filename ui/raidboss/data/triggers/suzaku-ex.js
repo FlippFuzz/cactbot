@@ -27,7 +27,7 @@
       tts: function(data, matches) {
         if (matches[1] == data.me) {
           return {
-            en: 'buster',
+            en: 'Tank Buster',
             de: 'basta',
             fr: 'tankbuster',
           };
@@ -41,14 +41,14 @@
         return data.role == 'tank' || data.role == 'healer';
       },
       alertText: {
-        en: 'Tank Buster',
+        en: 'Tank Buster + Cleave',
         de: 'Tenkbuster',
         fr: 'Tankbuster ',
       },
       tts: function(data, matches) {
         if (matches[1] == data.me) {
           return {
-            en: 'buster',
+            en: 'Tank Buster Cleave',
             de: 'basta',
             fr: 'tankbuster',
           };
@@ -59,14 +59,48 @@
       id: 'SuzEx Mesmerizing Melody',
       regex: / 14:32DA:Suzaku starts using Mesmerizing Melody/,
       alertText: {
-        en: 'Get Out',
+        en: 'Mesmerizing - Get Out',
+      }, 
+	  tts: {
+        en: 'Mesmerizing - Get Out',
+        de: 'Mesmerizing - Get Out',
+        fr: 'Mesmerizing - Get Out',
       },
     },
     {
       id: 'SuzEx Ruthless Refrain',
       regex: / 14:32DB:Suzaku starts using Ruthless Refrain/,
       alertText: {
-        en: 'Get In',
+        en: 'Knockback',
+      },
+	  tts: {
+        en: 'Knockback',
+        de: 'Knockback',
+        fr: 'Knockback',
+      },
+    },
+	{
+      id: 'SuzEx Close-quarter Crescendo',
+      regex: / 00:282b:Suzaku begins casting Close-quarter Crescendo/,
+      alertText: {
+        en: 'Tethers',
+      }, 
+	  tts: {
+        en: 'Tethers',
+        de: 'Tethers',
+        fr: 'Tethers',
+      },
+    },
+	{
+      id: 'SuzEx Incandescent Interlude',
+      regex: / 00:282b:Suzaku begins casting Incandescent Interlude/,
+      alertText: {
+        en: 'Meteors',
+      }, 
+	  tts: {
+        en: 'Meteors',
+        de: 'Meteors',
+        fr: 'Meteors',
       },
     },
   ],
