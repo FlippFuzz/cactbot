@@ -34,6 +34,13 @@
           };
         }
       },
+	  tts: function(data) {
+        return {
+          en: 'Tanks/Healers Spread',
+          de: 'Tanks/Healers Spread',
+          fr: 'Tanks/Healers Spread',
+        };
+      },
     },
     {
       id: 'O9S DPS Spread',
@@ -53,6 +60,13 @@
           };
         }
       },
+	  tts: function(data) {
+        return {
+          en: 'DPS Spread',
+          de: 'DPS Spread',
+          fr: 'DPS Spread',
+        };
+      },
     },
     {
       id: 'O9S ALL Spread',
@@ -60,6 +74,13 @@
       beforeSeconds: 4,
       alertText: {
         en: 'Spread (Everyone)',
+      },
+	  tts: function(data) {
+        return {
+          en: 'Spread',
+          de: 'Spread',
+          fr: 'Spread',
+        };
       },
     },
   ],
@@ -91,7 +112,7 @@
       tts: function(data, matches) {
         if (matches[1] == data.me) {
           return {
-            en: 'buster',
+            en: 'Tank Buster',
             de: 'basta',
             fr: 'tankbuster',
           };
@@ -112,7 +133,7 @@
       },
       tts: function(data) {
         return {
-          en: 'go to sides',
+          en: 'Sides, then Front/Back',
         };
       },
     },
@@ -126,7 +147,7 @@
       },
       tts: function(data) {
         return {
-          en: 'go to back',
+          en: 'Front/Back, then sides',
         };
       },
     },
@@ -134,6 +155,11 @@
       id: 'O9S Damning Edict',
       regex: /14:3171:Chaos starts using Damning Edict/,
       infoText: function(data) {
+        return {
+          en: 'Get Behind',
+        };
+      },
+	  tts: function(data) {
         return {
           en: 'Get Behind',
         };
@@ -171,6 +197,11 @@
         return data.role == 'tank';
       },
       alarmText: function(data) {
+        return {
+          en: 'Orb Tethers',
+        };
+      },
+	  tts: function(data) {
         return {
           en: 'Orb Tethers',
         };
