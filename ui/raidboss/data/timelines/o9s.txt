@@ -41,6 +41,7 @@ hideall "--sync--"
 1104.9 "(DPS) Stray Flames" sync /:Chaos:318C:/
 1109.8 "Big Bang" sync /:Chaos:3180:/
 1118.6 "Fiendish Orbs" sync /:Chaos:317C:/
+1128.6 "Move Boss NE"
 
 # Wind phase
 1141.0 "Cyclone" sync /:Chaos:3208:/
@@ -73,6 +74,7 @@ hideall "--sync--"
 1402.0 "(DPS) Stray Spray" sync /:Chaos:318D:/
 1402.3 "Big Bang" sync /:Chaos:3181:/
 1413.7 "Fiendish Orbs" sync /:Chaos:317D:/
+1423.7 "Move Boss North"
 
 # Earth phase
 1436.0 "Earthquake" sync /:Chaos:3209:/
@@ -85,7 +87,7 @@ hideall "--sync--"
 1507.9 "Fiendish Orbs" sync /:Chaos:317C:/
 
 # Enrage phase
-1538.4 "Blaze" sync /:Chaos:3206:/
+1538.4 "Final Blaze" sync /:Chaos:3206:/
 1546.1 "(ALL) Stray Flames" sync /:Chaos:318C:/
 1551.4 "Tsunami" sync /:Chaos:3207:/
 1558.0 "(ALL) Stray Spray" sync /:Chaos:318D:/
@@ -111,6 +113,7 @@ hideall "--sync--"
 2096.3 "(DPS) Stray Spray" sync /:Chaos:318D:/
 2096.5 "Big Bang" sync /:Chaos:3181:/
 2107.8 "Fiendish Orbs" sync /:Chaos:317D:/
+2117.8 "Move Boss North"
 
 # Earth phase
 2129.8 "Earthquake" sync /:Chaos:3209:/
@@ -142,6 +145,7 @@ hideall "--sync--"
 2382.5 "(DPS) Stray Flames" sync /:Chaos:318C:/
 2387.0 "Big Bang" sync /:Chaos:3180:/
 2395.6 "Fiendish Orbs" sync /:Chaos:317C:/
+2405.6 "Move Boss NE"
 
 # Wind phase
 2417.6 "Cyclone" sync /:Chaos:3208:/
@@ -156,7 +160,7 @@ hideall "--sync--"
 2500.7 "Fiendish Orbs" sync /:Chaos:317D:/
 
 # Enrage phase
-2530.8 "Blaze" sync /:Chaos:3206:/
+2530.8 "Final Blaze" sync /:Chaos:3206:/
 2538.5 "(ALL) Stray Flames" sync /:Chaos:318C:/
 2543.8 "Tsunami" sync /:Chaos:3207:/
 2550.4 "(ALL) Stray Spray" sync /:Chaos:318D:/
