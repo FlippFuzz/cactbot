@@ -54,16 +54,16 @@ def add_default_ability_mappings(ability_replace):
   # FIXME: add ja translations here.
   # FIXME: add Start as well
   ability_replace['de']['--targetable--'] = '--anvisierbar--'
-  ability_replace['fr']['--targetable--'] = '--ciblable--'
+  ability_replace['fr']['--targetable--'] = '--Ciblable--'
 
   ability_replace['de']['--untargetable--'] = '--nich anvisierbar--'
-  ability_replace['fr']['--untargetable--'] = '--impossible à cibler--'
+  ability_replace['fr']['--untargetable--'] = '--Impossible à cibler--'
 
   ability_replace['de']['Enrage'] = 'Finalangriff'
-  ability_replace['fr']['Enrage'] = 'Enragement'
+  ability_replace['fr']['Enrage'] = 'Enrage'
 
   ability_replace['fr']['--Reset--'] = '--Réinitialisation--'
-  ability_replace['fr']['--sync--'] = '--synchronisation--'
+  ability_replace['fr']['--sync--'] = '--Synchronisation--'
 
 def add_default_sync_mappings(sync_replace):
   sync_replace['de']['Engage!'] = 'Start!'
@@ -85,7 +85,9 @@ def build_mapping(translations, ignore_list=[]):
       if default_name in replace[lang]:
         existing_name = replace[lang][default_name]
         if existing_name != name:
-          raise Exception('Conflict on %s: "%s" and "%s"' % (default_name, existing_name, name))
+          # Just clean this up in post.
+          # raise Exception('Conflict on %s: "%s" and "%s"' % (default_name, existing_name, name))
+          pass
       else:
         replace[lang][default_name] = name
   return replace
