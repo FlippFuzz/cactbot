@@ -14,17 +14,20 @@ hideall "--sync--"
 27.4 "Cardinals" sync /::31B3:/ # X hit, not sure of sync yet
 
 35.9 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.029
+46.0 "Akh Morn + Out" 
 47.1 "Akh Morn" sync /:Midgardsormr:31AB:/
 53.6 "Spin" sync /:Midgardsormr:31AE:/
 57.2 "Out" sync /:Midgardsormr:31B2:/
 69.9 "Tail End" sync /:Midgardsormr:31AA:/
 
 78.2 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.039
+88.0 "Earth Shaker + In/Out" 
 89.4 "Flip/Spin" sync /:Midgardsormr:31(AE|B0)/
 92.9 "In/Out" sync /:(Midgardsormr)?:31B(2|4):/ # Sometimes missing actor name
 92.9 "Earth Shaker" sync /:Midgardsormr:31B6:/ # Missing actor name on all but one
 
 101.8 "Flip" sync /:Midgardsormr:31AD:/
+105.0 "Buster,Thunder,Corner/Cardinals" 
 112.0 "Tail End" sync /:Midgardsormr:31AA:/
 114.1 "Flip/Spin" sync /:Midgardsormr:31(AE|B0):/
 118.1 "Corners/Cardinals" sync /:Midgardsormr:31B(3|5):/
@@ -33,6 +36,7 @@ hideall "--sync--"
 131.2 "Time Immemorial" sync /:Midgardsormr:32EF:/
 141.5 "Tail End" sync /:Midgardsormr:31AA:/
 149.8 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.041
+157.0 "Ice + In/Out" 
 158.9 "Northern Cross" sync /:Midgardsormr:3625:/
 163.1 "Flip/Spin" sync /:Midgardsormr:31AE:/ # drift 0.021
 166.6 "In/Out" sync /:Midgardsormr:31B(2|4):/
@@ -40,6 +44,7 @@ hideall "--sync--"
 175.3 "Dry Ice" sync /:Midgardsormr:3631:/
 
 179.7 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.036
+190.0 "Aoes + In/Out" 
 191.0 "Flip/Spin" sync /:Midgardsormr:31(AE|B0):/
 194.5 "In/Out" sync /:Midgardsormr:31B(2|4):/
 194.9 "Horrid Roar" sync /:Midgardsormr:31B9:/

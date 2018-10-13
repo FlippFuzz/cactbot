@@ -11,6 +11,63 @@
 [{
   zoneRegex: /^Alphascape V2.0 \(Savage\)$/,
   timelineFile: 'o10s.txt',
+  timelineTriggers: [
+    {
+      id: 'O10S Akh Morn + Out',
+      regex: /Akh Morn \+ Out/,
+      tts: function(data) {
+		return {
+	      en: 'Akh Morn + Out',
+	      de: 'Akh Morn + Out',
+		  fr: 'Akh Morn + Out',
+		};
+      },
+    },
+	{
+      id: 'O10S Akh Morn + Out',
+      regex: /Earth Shaker \+ In\/Out/,
+      tts: function(data) {
+		return {
+	      en: 'Earth Shaker + In/Out',
+	      de: 'Earth Shaker + In/Out',
+		  fr: 'Earth Shaker + In/Out',
+		};
+      },
+    },
+	{
+      id: 'O10S Buster,Thunder,Corner/Cardinals',
+      regex: /Buster,Thunder,Corner\/Cardinals/,
+      tts: function(data) {
+		return {
+	      en: 'Buster,Thunder,Corner/Cardinals',
+	      de: 'Buster,Thunder,Corner/Cardinals',
+		  fr: 'Buster,Thunder,Corner/Cardinals',
+		};
+      },
+    },
+	{
+      id: 'O10S Ice + In/Out',
+      regex: /Ice \+ In\/Out/,
+      tts: function(data) {
+		return {
+	      en: 'Ice + In/Out',
+	      de: 'Ice + In/Out',
+		  fr: 'Ice + In/Out',
+		};
+      },
+    },
+	{
+      id: 'O10S Aoes + In/Out',
+      regex: /Aoes \+ In\/Out/,
+      tts: function(data) {
+		return {
+	      en: 'Aoes + In/Out',
+	      de: 'Aoes + In/Out',
+		  fr: 'Aoes + In/Out',
+		};
+      },
+    },
+  ],
   triggers: [
     {
       id: 'O10S Tail End',
@@ -37,7 +94,7 @@
       tts: function(data, matches) {
         if (matches[1] == data.me) {
           return {
-            en: 'buster',
+            en: 'Tank Buster',
             de: 'basta',
             fr: 'tankbuster',
           };
