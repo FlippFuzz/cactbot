@@ -9,20 +9,20 @@
       id: 'O11S Mustard Bomb',
       regex: / 14:326D:Omega starts using Mustard Bomb on (\y{Name})/,
       regexDe: / 14:326D:Omega starts using Senfbombe on (\y{Name})/,
-      regexFr: / 14:326D:Oméga starts using Obus d'ypérite on (\y{Name})/,
+      regexFr: / 14:326D:Oméga starts using Obus D\'ypérite on (\y{Name})/,
       regexJa: / 14:326D:オメガ starts using マスタードボム on (\y{Name})/,
       alarmText: function(data, matches) {
         if (matches[1] == data.me) {
           return {
             en: 'Tank Buster on YOU',
-            de: 'Tenkbuster auf DIR',
+            de: 'Tankbuster auf DIR',
             fr: 'Tankbuster sur VOUS',
           };
         }
         if (data.role == 'healer') {
           return {
             en: 'Buster on ' + data.ShortName(matches[1]),
-            de: 'Tenkbuster auf ' + data.ShortName(matches[1]),
+            de: 'Tankbuster auf ' + data.ShortName(matches[1]),
             fr: 'Tankbuster sur ' + data.ShortName(matches[1]),
           };
         }
@@ -60,13 +60,15 @@
       id: 'O11S Starboard Cannon 1',
       regex: / 14:326[23]:Omega starts using Starboard Wave Cannon/,
       regexDe: / 14:326[23]:Omega starts using Steuerbord-Wellenkanone/,
-      regexFr: / 14:326[23]:Oméga starts using Canon plasma tribord/,
+      regexFr: / 14:326[23]:Oméga starts using Canon Plasma Tribord/,
       regexJa: / 14:326[23]:オメガ starts using 右舷斉射・波動砲/,
       condition: function(data) {
         return data.lastWasStarboard === undefined;
       },
       alertText: {
         en: 'Left',
+        de: 'Links',
+        fr: 'Gauche',
       },
       run: function(data) {
         data.lastWasStarboard = true;
@@ -76,13 +78,15 @@
       id: 'O11S Larboard Cannon 1',
       regex: / 14:326[45]:Omega starts using Larboard Wave Cannon/,
       regexDe: / 14:326[45]:Omega starts using Backbord-Wellenkanone/,
-      regexFr: / 14:326[45]:Oméga starts using Canon plasma bâbord/,
+      regexFr: / 14:326[45]:Oméga starts using Canon Plasma Bâbord/,
       regexJa: / 14:326[45]:オメガ starts using 左舷斉射・波動砲/,
       condition: function(data) {
         return data.lastWasStarboard === undefined;
       },
       alertText: {
         en: 'Right',
+        de: 'Rechts',
+        fr: 'Droite',
       },
       run: function(data) {
         data.lastWasStarboard = false;
@@ -92,7 +96,7 @@
       id: 'O11S Starboard Cannon 2',
       regex: / 14:3263:Omega starts using Starboard Wave Cannon/,
       regexDe: / 14:3263:Omega starts using Steuerbord-Wellenkanone/,
-      regexFr: / 14:3263:Oméga starts using Canon plasma tribord/,
+      regexFr: / 14:3263:Oméga starts using Canon Plasma Tribord/,
       regexJa: / 14:3263:オメガ starts using 右舷斉射・波動砲/,
       condition: function(data) {
         return data.lastWasStarboard !== undefined;
@@ -101,10 +105,14 @@
         if (data.lastWasStarboard) {
           return {
             en: 'Move (Left)',
+            de: 'Bewegen (Links)',
+            fr: 'Bougez (Gauche)',
           };
         }
         return {
           en: 'Stay (Left)',
+          de: 'Stehenbleiben (Links)',
+          fr: 'Restez ici (Gauche)',
         };
       },
     },
@@ -112,7 +120,7 @@
       id: 'O11S Larboard Cannon 2',
       regex: / 14:3265:Omega starts using Larboard Wave Cannon/,
       regexDe: / 14:3265:Omega starts using Backbord-Wellenkanone/,
-      regexFr: / 14:3265:Oméga starts using Canon plasma bâbord/,
+      regexFr: / 14:3265:Oméga starts using Canon Plasma Bâbord/,
       regexJa: / 14:3265:オメガ starts using 左舷斉射・波動砲/,
       condition: function(data) {
         return data.lastWasStarboard !== undefined;
@@ -121,10 +129,14 @@
         if (data.lastWasStarboard) {
           return {
             en: 'Stay (Right)',
+            de: 'Stehenbleiben (Rechts)',
+            fr: 'Restez ici (Droite)',
           };
         }
         return {
           en: 'Move (Right)',
+          de: 'Bewegen (Rechts)',
+          fr: 'Bougez (Droite)',
         };
       },
     },
@@ -132,42 +144,50 @@
       id: 'O11S Starboard Surge 1',
       regex: / 14:3266:Omega starts using Starboard Wave Cannon Surge/,
       regexDe: / 14:3266:Omega starts using Steuerbord-Wellenkanone Surge/,
-      regexFr: / 14:3266:Oméga starts using Canon plasma tribord Surge/,
+      regexFr: / 14:3266:Oméga starts using Canon Plasma Absolu Tribord/,
       regexJa: / 14:3266:オメガ starts using 右舷斉射・零式波動砲/,
       alertText: {
         en: 'Left (then opposite)',
+        de: 'Links (dann umgekehrt)',
+        fr: 'Gauche (puis Droite)',
       },
     },
     {
       id: 'O11S Larboard Surge 1',
       regex: / 14:3268:Omega starts using Larboard Wave Cannon Surge/,
       regexDe: / 14:3268:Omega starts using Backbord-Nullform-Partikelstrahl/,
-      regexFr: / 14:3268:Oméga starts using Canon plasma absolu bâbord/,
+      regexFr: / 14:3268:Oméga starts using Canon Plasma Absolu Bâbord/,
       regexJa: / 14:3268:オメガ starts using 左舷斉射・零式波動砲/,
       alertText: {
         en: 'Right (then opposite)',
+        de: 'Rechts (dann umgekehrt)',
+        fr: 'Droite (puis Gauche)',
       },
     },
     {
       id: 'O11S Starboard Surge 2',
       regex: / 14:3266:Omega starts using Starboard Wave Cannon Surge/,
       regexDe: / 14:3266:Omega starts using Steuerbord-Wellenkanone Surge/,
-      regexFr: / 14:3266:Oméga starts using Canon plasma tribord Surge/,
+      regexFr: / 14:3266:Oméga starts using Canon Plasma Absolu Tribord/,
       regexJa: / 14:3266:オメガ starts using 右舷斉射・零式波動砲/,
       delaySeconds: 4,
       alertText: {
         en: 'Opposite (Left)',
+        de: 'Umgekehrt (Links)',
+        fr: 'Côté opposé (Gauche)',
       },
     },
     {
       id: 'O11S Larboard Surge 2',
       regex: / 14:3268:Omega starts using Larboard Wave Cannon Surge/,
       regexDe: / 14:3268:Omega starts using Backbord-Nullform-Partikelstrahl/,
-      regexFr: / 14:3268:Oméga starts using Canon plasma absolu bâbord/,
+      regexFr: / 14:3268:Oméga starts using Canon Plasma Absolu Bâbord/,
       regexJa: / 14:3268:オメガ starts using 左舷斉射・零式波動砲/,
       delaySeconds: 4,
       alertText: {
         en: 'Opposite (Right)',
+        de: 'Umgekehrt (Rechts)',
+        fr: 'Côté opposé (Droite)',
       },
     },
   ],
@@ -178,7 +198,7 @@
         'Engage!': 'Start!',
         'Level Checker': 'Monitor',
         'Omega': 'Omega',
-        'Augmented Rocket Punch': 'verstärkt[a] Raketenschlag',
+        'Augmented Rocket Punch': 'verstärkter Raketenschlag',
         'Rocket Punch': 'Raketenschlag',
       },
       'replaceText': {
@@ -252,8 +272,8 @@
         'Engage!': 'À l\'attaque',
         'Level Checker': 'Vérifiniveau',
         'Omega': 'Oméga',
-        'Augmented Rocket Punch': 'astéropoing renforcé',
-        'Rocket Punch': 'astéropoing',
+        'Augmented Rocket Punch': 'Astéropoing renforcé',
+        'Rocket Punch': 'Astéropoing',
       },
       'replaceText': {
         '--Reset--': '--Réinitialisation--',
@@ -300,7 +320,6 @@
         'Unmitigated Explosion': 'Grosse explosion',
         'Update Program': 'Boucle de programme : mise à jour',
         'Wave Cannon Kyrios': 'Canon plasma P',
-
         'Starboard/Larboard Cannon': 'Tribord/Bâbord',
         'Starboard/Larboard Surge': 'Tribord/Bâbord',
       },

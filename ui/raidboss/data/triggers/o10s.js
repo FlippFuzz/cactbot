@@ -79,14 +79,14 @@
         if (matches[1] == data.me) {
           return {
             en: 'Tank Buster on YOU',
-            de: 'Tenkbuster auf DIR',
+            de: 'Tankbuster auf DIR',
             fr: 'Tankbuster sur VOUS',
           };
         }
         if (data.role == 'healer') {
           return {
             en: 'Buster on ' + data.ShortName(matches[1]),
-            de: 'Tenkbuster auf ' + data.ShortName(matches[1]),
+            de: 'Tankbuster auf ' + data.ShortName(matches[1]),
             fr: 'Tankbuster sur ' + data.ShortName(matches[1]),
           };
         }
@@ -109,6 +109,7 @@
       },
       alarmText: {
         en: 'Fire Marker on YOU',
+        de: 'Feuer Marker auf DIR',
         fr: 'Feu sur VOUS',
       },
       infoText: function(data, matches) {
@@ -124,6 +125,7 @@
       },
       infoText: {
         en: 'Death From Below',
+        de: 'Tod von unten',
         fr: 'Désastre terrestre',
       },
     },
@@ -135,6 +137,7 @@
       },
       infoText: {
         en: 'Death From Above',
+        de: 'Tod von oben',
         fr: 'Désastre Céleste',
       },
     },
@@ -164,6 +167,7 @@
       regexJa: /15:\y{ObjectId}:ミドガルズオルム:31AC:/,
       infoText: {
         en: 'Next Spin: In or Out',
+        de: 'Nächste Drehung: Rein oder Raus',
         fr: 'Tour suivant : Dedans/Dehors',
       },
       run: function(data) {
@@ -178,6 +182,7 @@
       regexJa: /15:\y{ObjectId}:ミドガルズオルム:31AD:/,
       infoText: {
         en: 'Next Spin: Cardinals or Corners',
+        de: 'Nächste Drehung: Kanten oder Ecken',
         fr: 'Tour suivant : Cardinaux ou Coins',
       },
       run: function(data) {
@@ -197,11 +202,13 @@
         if (data.lastSpinWasHorizontal) {
           return {
             en: 'Get Out',
+            de: 'Raus da',
             fr: 'Sortez !',
           };
         }
         return {
           en: 'Go To Cardinals',
+          de: 'An die Kanten',
           fr: 'Allez sur les cardinaux',
         };
       },
@@ -219,11 +226,13 @@
         if (data.lastSpinWasHorizontal) {
           return {
             en: 'Get In',
+            de: 'Rein da',
             fr: 'Sous le boss !',
           };
         }
         return {
           en: 'Go To Corners',
+          de: 'In die Ecken',
           fr: 'Allez dans les coins',
         };
       },
@@ -235,8 +244,8 @@
       'replaceSync': {
         'Engage!': 'Start!',
         'Midgardsormr': 'Midgardsormr',
-        'Ancient Dragon': 'Antik[a] Drache',
-        'Immortal Key': 'Unsterblich[a] Schlüssel',
+        'Ancient Dragon': 'Antiker Drache',
+        'Immortal Key': 'Unsterblicher Schlüssel',
       },
       'replaceText': {
         '--targetable--': '--anvisierbar--',
@@ -267,19 +276,17 @@
         'Time Immemorial': 'Urknall',
         'Touchdown': 'Himmelssturz',
         'attack': 'Attacke',
-
-        // FIXME
-        'Flip': 'Flip',
-        'Spin': 'Spin',
-        'Cardinals': 'Cardinals',
-        'Corners': 'Corners',
-        'In': 'In',
-        'Out': 'Out',
-        'Flip/Spin': 'Flip/Spin',
-        'In/Out': 'In/Out',
-        'Corners/Cardinals': 'Corners/Cardinals',
-        'Shaker/Thunder': 'Shaker/Thunder',
-        ' ready': ' ready',
+        'Flip': 'Rolle',
+        'Spin': 'Drehung',
+        'Cardinals': 'Kanten',
+        'Corners': 'Ecken',
+        'In': 'Rein',
+        'Out': 'Raus',
+        'Flip/Spin': 'Rolle/Drehung',
+        'In/Out': 'Rein/Raus',
+        'Corners/Cardinals': 'Ecken/Kanten',
+        'Shaker/Thunder': 'Erdstoß/Blitz',
+        ' ready': ' bereit',
         'Signal': 'Signal',
         'Position': 'Position',
       },
