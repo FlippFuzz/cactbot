@@ -7,6 +7,20 @@
   timelineFile: 'o12s.txt',
   triggers: [
     {
+      // Track Omega MF vs Final Omega phase.
+      regex: / 14:3357:Omega starts using (?:Ion Efflux|Unknown_3357)/,
+      regexDe: / 14:3357:Omega starts using (?:Ionenstrom|Unknown_3357)/,
+      regexFr: / 14:3357:Oméga starts using (?:Fuite D\'ions|Unknown_3357)/,
+      run: function(data) {
+        data.isFinalOmega = true;
+
+        data.helloDebuffs = {};
+        data.archiveMarkers = {};
+        data.armValue = 0;
+        data.numArms = 0;
+      },
+    },
+    {
       id: 'O12S Beyond Defense',
       regex: / 1[56]:\y{ObjectId}:Omega-M:332C:[^:]*:\y{ObjectId}:(\y{Name}):/,
       regexDe: / 1[56]:\y{ObjectId}:Omega-M:332C:[^:]*:\y{ObjectId}:(\y{Name}):/,
@@ -137,8 +151,11 @@
       },
     },
     {
-      id: 'O12S Stack Marker',
+      id: 'O12S MF Stack Marker',
       regex: /1B:........:\y{Name}:....:....:003E:0000:0000:0000:/,
+      condition: function(data) {
+        return !data.isFinalOmega;
+      },
       suppressSeconds: 1,
       infoText: {
         en: 'Stack',
@@ -203,6 +220,34 @@
       },
     },
     {
+      id: 'O12S Oversampled Wave Cannon Right',
+      regex: / 14:3364:Omega starts using (?:Oversampled Wave Cannon|Unknown_3364)/,
+      infoText: function(data) {
+        if (data.role == 'tank') {
+          return {
+            en: 'Monitors Left',
+          };
+        }
+        return {
+          en: 'Dodge Left',
+        };
+      },
+    },
+    {
+      id: 'O12S Oversampled Wave Cannon Left',
+      regex: / 14:3365:Omega starts using (?:Oversampled Wave Cannon|Unknown_3365)/,
+      infoText: function(data) {
+        if (data.role == 'tank') {
+          return {
+            en: 'Monitors Right',
+          };
+        }
+        return {
+          en: 'Dodge Right',
+        };
+      },
+    },
+    {
       id: 'O12S Target Analysis Target',
       regex: /1B:........:(\y{Name}):....:....:000E:0000:0000:0000:/,
       alarmText: function(data, matches) {
@@ -245,18 +290,6 @@
       },
     },
     {
-      id: 'Hello World Cleanup',
-      regex: / 14:336E:Omega starts using/,
-      run: function(data) {
-        data.personDebuff = {};
-        data.totalDefamation = 0;
-        data.totalBlueMarker = 0;
-        data.totalStack = 0;
-        data.totalRot = 0;
-        data.totalHelloWorld = (data.totalHelloWorld || 0) + 1;
-      },
-    },
-    {
       id: 'O12S Defamation',
       regex: / 1A:(\y{Name}) gains the effect of (?:Unknown_681|Critical Overflow Bug) from/,
       regexDe: / 1A:(\y{Name}) gains the effect of (?:Unknown_681|Kritischer Bug: Überlauf) from/,
@@ -267,10 +300,6 @@
         en: 'Defamation on YOU',
         de: 'Urteil auf DIR',
       },
-      run: function(data, matches) {
-        data.totalDefamation++;
-        data.personDebuff[matches[1]] = true;
-      },
     },
     {
       id: 'O12S Latent Defect',
@@ -279,12 +308,8 @@
       condition: function(data, matches) {
         return data.me == matches[1];
       },
-      infoText: {
+      alertText: {
         en: 'Blue Marker',
-      },
-      run: function(data, matches) {
-        data.totalBlueMarker++;
-        data.personDebuff[matches[1]] = true;
       },
     },
     {
@@ -297,13 +322,9 @@
       infoText: {
         en: 'Rot',
       },
-      run: function(data, matches) {
-        data.totalRot++;
-        data.personDebuff[matches[1]] = true;
-      },
     },
     {
-      id: 'O12S Stack',
+      id: 'O12S Hello World Stack',
       regex: / 1A:(\y{Name}) gains the effect of (?:Unknown_680|Critical Synchronization Bug) from (?:.*) for (.*) Seconds/,
       regexDe: / 1A:(\y{Name}) gains the effect of (?:Unknown_680|Kritischer Bug: Synchronisierung) from (?:.*) for (.*) Seconds/,
       condition: function(data, matches) {
@@ -324,9 +345,124 @@
           de: 'Langer Stack',
         };
       },
+    },
+    {
+      id: 'O12S Hello World No Marker',
+      regex: / 1A:(\y{Name}) gains the effect of (?:Unknown_681|Critical Overflow Bug|Unknown_686|Latent Defect|Unknown_680|Critical Synchronization Bug) from/,
+      preRun: function(data, matches) {
+        data.helloDebuffs[matches[1]] = true;
+      },
+      alertText: function(data) {
+        // 1 Defamation (T), 3 Blue Markers (T/H/D), 2 Stack Markers (D/D) = 6
+        // Ignore rot here to be consistent.
+        if (Object.keys(data.helloDebuffs).length != 6)
+          return;
+        if (data.me in data.helloDebuffs)
+          return;
+        return {
+          en: 'No Marker',
+        };
+      },
+    },
+    {
+      // Archive All Marker Tracking
+      regex: /1B:........:(\y{Name}):....:....:(003E|0060):0000:0000:0000:/,
+      condition: function(data) {
+        return data.isFinalOmega;
+      },
       run: function(data, matches) {
-        data.totalStack++;
-        data.personDebuff[matches[1]] = true;
+        data.archiveMarkers[matches[1]] = matches[2];
+      },
+    },
+    {
+      id: 'O12S Archive All No Marker',
+      regex: /1B:........:(\y{Name}):....:....:(?:003E|0060):0000:0000:0000:/,
+      condition: function(data) {
+        // 4 fire markers, 1 stack marker.
+        return data.isFinalOmega && Object.keys(data.archiveMarkers).length == 5;
+      },
+      infoText: function(data, matches) {
+        for (let player in data.archiveMarkers) {
+          if (data.archiveMarkers[player] != '003E')
+            continue;
+          return {
+            en: 'Stack on ' + data.ShortName(player),
+            de: 'Stacken auf ' + data.ShortName(player),
+          };
+        }
+      },
+    },
+    {
+      id: 'O12S Archive All Stack Marker',
+      regex: /1B:........:(\y{Name}):....:....:003E:0000:0000:0000:/,
+      condition: function(data, matches) {
+        return data.isFinalOmega && matches[1] == data.me;
+      },
+      infoText: {
+        en: 'Stack on YOU',
+        de: 'Stacken auf DIR',
+      },
+    },
+    {
+      id: 'O12S Archive All Spread Marker',
+      regex: /1B:........:(\y{Name}):....:....:0060:0000:0000:0000:/,
+      condition: function(data, matches) {
+        return data.isFinalOmega && matches[1] == data.me;
+      },
+      infoText: {
+        en: 'Spread',
+        de: 'Verteilen',
+        fr: 'Ecartez-vous',
+      },
+    },
+    {
+      id: 'O12S Archive All Blue Arrow',
+      regex: / 1B:........:Rear Power Unit:....:....:009D:0000:0000:0000:/,
+      alertText: {
+        en: 'Back Left',
+      },
+    },
+    {
+      id: 'O12S Archive All Red Arrow',
+      regex: / 1B:........:Rear Power Unit:....:....:009C:0000:0000:0000:/,
+      alertText: {
+        en: 'Back Right',
+      },
+    },
+    {
+      // Archive Peripheral Tracking.
+      regex: / 1B:........:Right Arm Unit:....:....:009(C|D):0000:0000:0000:/,
+      run: function(data, matches) {
+        // Create a 3 digit binary value, R = 0, B = 1.
+        // e.g. BBR = 110 = 6
+        data.armValue *= 2;
+        if (matches[1] == 'D')
+          data.armValue += 1;
+        data.numArms++;
+      },
+    },
+    {
+      id: 'O12S Archive Peripheral',
+      regex: / 1B:........:Right Arm Unit:....:....:009(?:C|D):0000:0000:0000:/,
+      condition: function(data) {
+        return data.numArms == 3;
+      },
+      alertText: function(data) {
+        let v = parseInt(data.armValue);
+        if (!(v >= 0) || v > 7)
+          return;
+        return {
+          en: {
+            0b000: 'East',
+            0b001: 'Northeast',
+            0b010: undefined,
+            0b011: 'Northwest',
+            0b100: 'Southeast',
+            0b101: undefined,
+            0b110: 'Southwest',
+            0b111: 'West',
+          },
+        }[data.lang][v];
       },
     },
   ],
@@ -340,8 +476,11 @@
         'Omega-M': 'Omega-M',
         'Optical Unit': 'Optikmodul',
 
-        'Left Arm Unit': 'linker Arm',
-        'Right Arm Unit': 'rechter Arm',
+        'Left Arm Unit': 'Linker Arm',
+        'Right Arm Unit': 'Rechter Arm',
+
+        // FIXME
+        'Rear Power Unit': 'Rear Power Unit',
       },
       'replaceText': {
         '--targetable--': '--anvisierbar--',
@@ -432,10 +571,13 @@
         'Omega': 'Oméga',
         'Omega-F': 'Oméga-F',
         'Omega-M': 'Oméga-M',
-        'Optical Unit': 'unité optique',
+        'Optical Unit': 'Unité Optique',
 
-        'Left Arm Unit': 'unité bras gauche',
-        'Right Arm Unit': 'unité bras droit',
+        'Left Arm Unit': 'Unité Bras Gauche',
+        'Right Arm Unit': 'Unité Bras Droit',
+
+        // FIXME
+        'Rear Power Unit': 'Rear Power Unit',
       },
       'replaceText': {
         '--Reset--': '--Réinitialisation--',
@@ -532,6 +674,9 @@
 
         'Left Arm Unit': 'レフトアームユニット',
         'Right Arm Unit': 'ライトアームユニット',
+
+        // FIXME
+        'Rear Power Unit': 'Rear Power Unit',
       },
       'replaceText': {
         'Advanced Optical Laser': 'オプチカルレーザーS',
