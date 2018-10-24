@@ -13,6 +13,36 @@
   timelineFile: 'o10s.txt',
   timelineTriggers: [
     {
+      id: 'O10S Flying',
+      regex: /--Flying--/,
+      run: function(data) {
+        data.flying = true;
+      },
+    },
+	{
+      id: 'O10S Grounded',
+      regex: /--Grounded--/,
+      run: function(data) {
+        data.flying = false;
+      },
+    },
+	{
+      id: 'O10S Tank Swap',
+      regex: /TANK SWAP/,
+	  alertText: {
+        en: 'TANK SWAP',
+        de: 'TANK SWAP',
+        fr: 'TANK SWAP',
+      },
+      tts: function(data) {
+		return {
+	      en: 'TANK SWAP',
+	      de: 'TANK SWAP',
+		  fr: 'TANK SWAP',
+		};
+      },
+    },
+    {
       id: 'O10S Akh Morn + Out',
       regex: /Akh Morn \+ Out/,
       tts: function(data) {
@@ -123,10 +153,19 @@
       condition: function(data, matches) {
         return data.me == matches[1];
       },
-      infoText: {
-        en: 'Death From Below',
-        de: 'Tod von unten',
-        fr: 'Désastre terrestre',
+	  alertText: function(data) {
+        if (data.flying === true) {
+          return {
+            en: 'Yours. Provoke!',
+            de: 'Yours. Provoke!',
+            fr: 'Yours. Provoke!',
+          };
+        }
+        return {
+          en: 'NOT Yours. Shirk!',
+          de: 'NOT Yours. Shirk!',
+          fr: 'NOT Yours. Shirk!',
+        };
       },
     },
     {
@@ -135,12 +174,21 @@
       condition: function(data, matches) {
         return data.me == matches[1];
       },
-      infoText: {
-        en: 'Death From Above',
-        de: 'Tod von oben',
-        fr: 'Désastre Céleste',
-      },
-    },
+	  alertText: function(data) {
+        if (data.flying === true) {
+          return {
+            en: 'NOT Yours. Shirk!',
+            de: 'NOT Yours. Shirk!',
+            fr: 'NOT Yours. Shirk!',
+          };
+        }
+        return {
+          en: 'Yours. Provoke!',
+          de: 'Yours. Provoke!',
+          fr: 'Yours. Provoke!',
+        };   
+      },		
+	},
     {
       // Spin Table
       // 31AC + 31AE = 31B2 (horiz + horiz = out)

@@ -3,31 +3,34 @@
 
 hideall "--Reset--"
 hideall "--sync--"
+hideall "--Flying--"
+hideall "--Grounded--"
 
 0.0 "--Reset--" sync /Removing combatant Midgardsormr.  Max HP: \d{8}/ window 10000 jump 0
 
 0.0 "Start" sync /0044:I am Midgardsormr/ window 0,1
 0.0 "--sync--" sync /:Engage!/ window 0,1
 2.2 "--sync--" sync /:Midgardsormr:31F9:/ window 2.5,0 # first auto
+2.3 "--Flying--" # Inserting right after a sync so that it will hopefully be executed
 12.3 "Flip" sync /:Midgardsormr:31AD:/
 23.5 "Spin" sync /:Midgardsormr:31AE:/
 27.4 "Cardinals" sync /::31B3:/ # X hit, not sure of sync yet
 
 35.9 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.029
-46.0 "Akh Morn + Out" 
+37.0 "Akh Morn + Out" 
 47.1 "Akh Morn" sync /:Midgardsormr:31AB:/
 53.6 "Spin" sync /:Midgardsormr:31AE:/
 57.2 "Out" sync /:Midgardsormr:31B2:/
 69.9 "Tail End" sync /:Midgardsormr:31AA:/
 
 78.2 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.039
-88.0 "Earth Shaker + In/Out" 
+80.0 "Earth Shaker + In/Out" 
 89.4 "Flip/Spin" sync /:Midgardsormr:31(AE|B0)/
 92.9 "In/Out" sync /:(Midgardsormr)?:31B(2|4):/ # Sometimes missing actor name
 92.9 "Earth Shaker" sync /:Midgardsormr:31B6:/ # Missing actor name on all but one
 
 101.8 "Flip" sync /:Midgardsormr:31AD:/
-105.0 "Buster,Thunder,Corner/Cardinals" 
+103.0 "Buster,Thunder,Corner/Cardinals" 
 112.0 "Tail End" sync /:Midgardsormr:31AA:/
 114.1 "Flip/Spin" sync /:Midgardsormr:31(AE|B0):/
 118.1 "Corners/Cardinals" sync /:Midgardsormr:31B(3|5):/
@@ -36,7 +39,7 @@ hideall "--sync--"
 131.2 "Time Immemorial" sync /:Midgardsormr:32EF:/
 141.5 "Tail End" sync /:Midgardsormr:31AA:/
 149.8 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.041
-157.0 "Ice + In/Out" 
+151.0 "Ice + In/Out" 
 158.9 "Northern Cross" sync /:Midgardsormr:3625:/
 163.1 "Flip/Spin" sync /:Midgardsormr:31AE:/ # drift 0.021
 166.6 "In/Out" sync /:Midgardsormr:31B(2|4):/
@@ -44,13 +47,14 @@ hideall "--sync--"
 175.3 "Dry Ice" sync /:Midgardsormr:3631:/
 
 179.7 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.036
-190.0 "Aoes + In/Out" 
+181.0 "Aoes + In/Out" 
 191.0 "Flip/Spin" sync /:Midgardsormr:31(AE|B0):/
 194.5 "In/Out" sync /:Midgardsormr:31B(2|4):/
 194.9 "Horrid Roar" sync /:Midgardsormr:31B9:/
 202.9 "--untargetable--"
 
 # Add phase
+210.0 "TANK SWAP"
 215.9 "Frost Breath" sync /:Ancient Dragon:33F1:/ window 2.5,30
 226.2 "Frost Breath ready"
 
@@ -67,6 +71,7 @@ hideall "--sync--"
 323.3 "Thunderstorm" sync /:Midgardsormr:31B8:/
 323.9 "Cauterize" sync /:Midgardsormr:3240:/
 328.0 "Touchdown" sync /:Midgardsormr:31BB:/
+328.1 "--Grounded--"  # Inserting right after a sync so that it will hopefully be executed
 332.5 "--targetable--"
 
 339.2 "Time Immemorial" sync /:Midgardsormr:31BF:/
@@ -79,11 +84,14 @@ hideall "--sync--"
 392.9 "Flame Blast"
 395.3 "Flame Blast"
 396.9 "Hot Tail" sync /:Midgardsormr:31BD:/
+400.0 "Auto 1" sync /:Midgardsormr:31F9:/
+404.0 "TANK SWAP" sync /:Midgardsormr:31F9:/
 
 408.1 "--untargetable--"
 412.3 "Exaflare"
 412.8 "Horrid Roar" sync /:Midgardsormr:31B9:/
 414.9 "Cauterize" sync /:Midgardsormr:3240:/
+415.0  "--Flying--" # Inserting right after a sync so that it will hopefully be executed
 415.3 "Exaflare"
 418.3 "Exaflare"
 421.4 "Exaflare"
