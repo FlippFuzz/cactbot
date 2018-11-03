@@ -148,6 +148,24 @@
           return 'Fire on ' + data.ShortName(matches[1]);
       },
     },
+	{
+      id: 'O10S Defenseless',
+      regex: / 00:08af:You suffer the effect of Defenseless/,
+      alarmText: function(data) {
+	    return {
+		  en: 'Defenseless. MOVE!',
+		  de: 'Defenseless. MOVE!',
+		  fr: 'Defenseless. MOVE!',
+	    };
+      },
+      tts: function(data) {
+	    return {
+		  en: 'Defenseless. MOVE!',
+		  de: 'Defenseless. MOVE!',
+		  fr: 'Defenseless. MOVE!',
+	    };
+      },
+    },
     {
       id: 'O10S Death From Below',
       regex: / 1B:........:(\y{Name}):....:....:008F:0000:0000:0000:/,
