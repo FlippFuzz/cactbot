@@ -175,15 +175,15 @@
 	  alertText: function(data) {
         if (data.flying === true) {
           return {
-            en: 'Yours. Provoke!',
-            de: 'Yours. Provoke!',
-            fr: 'Yours. Provoke!',
+            en: 'Yours!',
+            de: 'Yours!',
+            fr: 'Yours!',
           };
         }
         return {
-          en: 'NOT Yours. Shirk!',
-          de: 'NOT Yours. Shirk!',
-          fr: 'NOT Yours. Shirk!',
+          en: 'NOT Yours!',
+          de: 'NOT Yours!',
+          fr: 'NOT Yours!',
         };
       },
     },
@@ -196,15 +196,15 @@
 	  alertText: function(data) {
         if (data.flying === true) {
           return {
-            en: 'NOT Yours. Shirk!',
-            de: 'NOT Yours. Shirk!',
-            fr: 'NOT Yours. Shirk!',
+            en: 'NOT Yours!',
+            de: 'NOT Yours!',
+            fr: 'NOT Yours!',
           };
         }
         return {
-          en: 'Yours. Provoke!',
-          de: 'Yours. Provoke!',
-          fr: 'Yours. Provoke!',
+          en: 'Yours!',
+          de: 'Yours!',
+          fr: 'Yours!',
         };   
       },		
 	},

@@ -11,9 +11,10 @@ hideall "--Grounded--"
 0.0 "Start" sync /0044:I am Midgardsormr/ window 0,1
 0.0 "--sync--" sync /:Engage!/ window 0,1
 2.2 "--sync--" sync /:Midgardsormr:31F9:/ window 2.5,0 # first auto
-2.3 "--Flying--" # Inserting right after a sync so that it will hopefully be executed
+2.3 "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 12.3 "Flip" sync /:Midgardsormr:31AD:/
 23.5 "Spin" sync /:Midgardsormr:31AE:/
+24.0 "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 27.4 "Cardinals" sync /::31B3:/ # X hit, not sure of sync yet
 
 35.9 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.029
@@ -22,6 +23,7 @@ hideall "--Grounded--"
 53.6 "Spin" sync /:Midgardsormr:31AE:/
 57.2 "Out" sync /:Midgardsormr:31B2:/
 69.9 "Tail End" sync /:Midgardsormr:31AA:/
+70.0 "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 
 78.2 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.039
 80.0 "Earth Shaker + In/Out" 
@@ -37,6 +39,7 @@ hideall "--Grounded--"
 118.7 "Thunderstorm" sync /:Midgardsormr:31B8:/
 
 131.2 "Time Immemorial" sync /:Midgardsormr:32EF:/
+132.0 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 141.5 "Tail End" sync /:Midgardsormr:31AA:/
 149.8 "Spin" sync /:Midgardsormr:31AC:/ # drift 0.041
 151.0 "Ice + In/Out" 
@@ -51,15 +54,19 @@ hideall "--Grounded--"
 191.0 "Flip/Spin" sync /:Midgardsormr:31(AE|B0):/
 194.5 "In/Out" sync /:Midgardsormr:31B(2|4):/
 194.9 "Horrid Roar" sync /:Midgardsormr:31B9:/
+196.0 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 202.9 "--untargetable--"
 
 # Add phase
-210.0 "TANK SWAP"
+200.0 "TANK SWAP"
+201.0 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 215.9 "Frost Breath" sync /:Ancient Dragon:33F1:/ window 2.5,30
+216.0 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 226.2 "Frost Breath ready"
 
 282.0 "--sync--" sync /:Ancient Dragon:341A:/ window 80,10
 284.2 "Protostar" sync /:Midgardsormr:31C3:/ window 500,500
+284.3 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 294.8 "Protostar" # Damage instances
 295.9 "Protostar"
 297.0 "Protostar"
@@ -71,10 +78,11 @@ hideall "--Grounded--"
 323.3 "Thunderstorm" sync /:Midgardsormr:31B8:/
 323.9 "Cauterize" sync /:Midgardsormr:3240:/
 328.0 "Touchdown" sync /:Midgardsormr:31BB:/
-328.1 "--Grounded--"  # Inserting right after a sync so that it will hopefully be executed
+328.1 "--Grounded--"  # Multiple copies of "Grounded" to make sure it's executed
 332.5 "--targetable--"
 
 339.2 "Time Immemorial" sync /:Midgardsormr:31BF:/
+340.0  "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 350.7 "Crimson Breath" sync /:Midgardsormr:31BC:/
 357.9 "Crimson Breath" sync /:Midgardsormr:31BC:/
 365.3 "Crimson Breath" sync /:Midgardsormr:31BC:/
@@ -86,12 +94,13 @@ hideall "--Grounded--"
 396.9 "Hot Tail" sync /:Midgardsormr:31BD:/
 400.0 "Auto 1" sync /:Midgardsormr:31F9:/
 404.0 "TANK SWAP" sync /:Midgardsormr:31F9:/
+405.0  "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 
 408.1 "--untargetable--"
 412.3 "Exaflare"
 412.8 "Horrid Roar" sync /:Midgardsormr:31B9:/
 414.9 "Cauterize" sync /:Midgardsormr:3240:/
-415.0  "--Flying--" # Inserting right after a sync so that it will hopefully be executed
+415.1  "--Flying--" # Multiple copies of "Flying" to make sure it's executed
 415.3 "Exaflare"
 418.3 "Exaflare"
 421.4 "Exaflare"
@@ -104,6 +113,8 @@ hideall "--Grounded--"
 456.0 "Akh Morn" sync /:Midgardsormr:31AB:/ # drift -0.033
 466.0 "Horrid Roar" sync /:Midgardsormr:31B9:/
 467.6 "Thunderstorm" sync /:Midgardsormr:31B8:/
+468.0  "--Flying--" # Multiple copies of "Flying" to make sure it's executed
+
 
 ##################
 ## Branch point ##
