@@ -12,6 +12,7 @@ let Options = {
       mapImage: 'anemos.png',
       mapWidth: 1300,
       mapHeight: 950,
+      shortName: 'anemos',
       primaryWeather: ['Gales'],
       // TODO: these could be a little better tuned :C
       mapToPixelXScalar: 41.12,
@@ -478,7 +479,7 @@ let Options = {
       mapImage: 'pagos.png',
       mapWidth: 1500,
       mapHeight: 950,
-      primaryWeather: ['Blizzards', 'Thunder', 'Fog'],
+      shortName: 'pagos',
       mapToPixelXScalar: 41.08333,
       mapToPixelXConstant: -85.28333,
       mapToPixelYScalar: 41.09158,
@@ -491,21 +492,21 @@ let Options = {
         snowqueen: {
           label: {
             en: 'Queen',
-            de: 'Snow Queen',
+            de: 'Schneekönigin',
             fr: 'Snow Queen',
-            ja: 'Snow Queen',
+            ja: '女王',
           },
           mobName: {
             en: 'The Snow Queen',
-            de: 'The Snow Queen',
+            de: 'Schneekönigin',
             fr: 'The Snow Queen',
-            ja: 'The Snow Queen',
+            ja: '雪の女王',
           },
           trackerName: {
             en: 'Snow Queen',
             de: 'Snow Queen',
             fr: 'Snow Queen',
-            ja: 'Snow Queen',
+            ja: '女王',
           },
           x: 21.5,
           y: 26.5,
@@ -515,19 +516,19 @@ let Options = {
             en: 'Taxim',
             de: 'Taxim',
             fr: 'Taxim',
-            ja: 'Taxim',
+            ja: 'タキシム',
           },
           mobName: {
             en: 'Taxim',
             de: 'Taxim',
             fr: 'Taxim',
-            ja: 'Taxim',
+            ja: 'タキシム',
           },
           trackerName: {
             en: 'Taxim',
             de: 'Taxim',
             fr: 'Taxim',
-            ja: 'Taxim',
+            ja: 'タキシム',
           },
           x: 25.5,
           y: 28.3,
@@ -536,21 +537,21 @@ let Options = {
         ashdragon: {
           label: {
             en: 'Dragon',
-            de: 'Ash Dragon',
+            de: 'Aschedrache',
             fr: 'Ash Dragon',
-            ja: 'Ash Dragon',
+            ja: 'ドラゴン',
           },
           mobName: {
             en: 'Ash Dragon',
-            de: 'Ash Dragon',
+            de: 'Aschedrache',
             fr: 'Ash Dragon',
-            ja: 'Ash Dragon',
+            ja: 'アッシュドラゴン',
           },
           trackerName: {
             en: 'Ash Dragon',
             de: 'Ash Dragon',
             fr: 'Ash Dragon',
-            ja: 'Ash Dragon',
+            ja: 'アッシュドラゴン',
           },
           x: 29.7,
           y: 30.0,
@@ -560,19 +561,19 @@ let Options = {
             en: 'Glavoid',
             de: 'Glavoid',
             fr: 'Glavoid',
-            ja: 'Glavoid',
+            ja: 'グラヴォイド',
           },
           mobName: {
             en: 'Glavoid',
             de: 'Glavoid',
             fr: 'Glavoid',
-            ja: 'Glavoid',
+            ja: 'グラヴォイド',
           },
           trackerName: {
             en: 'Glavoid',
             de: 'Glavoid',
             fr: 'Glavoid',
-            ja: 'Glavoid',
+            ja: 'グラヴォイド',
           },
           x: 33.0,
           y: 28.0,
@@ -580,21 +581,21 @@ let Options = {
         anapos: {
           label: {
             en: 'Anapos',
-            de: 'Anapos',
+            de: 'Anapo',
             fr: 'Anapos',
-            ja: 'Anapos',
+            ja: 'アナポ',
           },
           mobName: {
             en: 'Anapos',
-            de: 'Anapos',
+            de: 'Anapo',
             fr: 'Anapos',
-            ja: 'Anapos',
+            ja: 'アナポ',
           },
           trackerName: {
             en: 'Anapos',
             de: 'Anapos',
             fr: 'Anapos',
-            ja: 'Anapos',
+            ja: 'アナポ',
           },
           x: 33.0,
           y: 21.5,
@@ -605,19 +606,19 @@ let Options = {
             en: 'Haku',
             de: 'Hakutaku',
             fr: 'Hakutaku',
-            ja: 'Hakutaku',
+            ja: 'ハクタク',
           },
           mobName: {
             en: 'Hakutaku',
             de: 'Hakutaku',
             fr: 'Hakutaku',
-            ja: 'Hakutaku',
+            ja: 'ハクタク',
           },
           trackerName: {
             en: 'Hakutaku',
             de: 'Hakutaku',
             fr: 'Hakutaku',
-            ja: 'Hakutaku',
+            ja: 'ハクタク',
           },
           x: 29.0,
           y: 22.5,
@@ -625,21 +626,21 @@ let Options = {
         igloo: {
           label: {
             en: 'Igloo',
-            de: 'Igloo',
+            de: 'Iglu',
             fr: 'Igloo',
-            ja: 'Igloo',
+            ja: 'イグル',
           },
           mobName: {
             en: 'King Igloo',
-            de: 'King Igloo',
+            de: 'Iglu-König',
             fr: 'King Igloo',
-            ja: 'King Igloo',
+            ja: 'キングイグルー',
           },
           trackerName: {
             en: 'Igloo',
             de: 'Igloo',
             fr: 'Igloo',
-            ja: 'Igloo',
+            ja: 'イグル',
           },
           x: 17,
           y: 16,
@@ -649,19 +650,19 @@ let Options = {
             en: 'Asag',
             de: 'Asag',
             fr: 'Asag',
-            ja: 'Asag',
+            ja: 'アサグ',
           },
           mobName: {
             en: 'Asag',
             de: 'Asag',
             fr: 'Asag',
-            ja: 'Asag',
+            ja: 'アサグ',
           },
           trackerName: {
             en: 'Asag',
             de: 'Asag',
             fr: 'Asag',
-            ja: 'Asag',
+            ja: 'アサグ',
           },
           x: 11.3,
           y: 10.5,
@@ -671,19 +672,19 @@ let Options = {
             en: 'Surabhi',
             de: 'Surabhi',
             fr: 'Surabhi',
-            ja: 'Surabhi',
+            ja: 'スラビー',
           },
           mobName: {
             en: 'Surabhi',
             de: 'Surabhi',
             fr: 'Surabhi',
-            ja: 'Surabhi',
+            ja: 'スラビー',
           },
           trackerName: {
             en: 'Surabhi',
             de: 'Surabhi',
             fr: 'Surabhi',
-            ja: 'Surabhi',
+            ja: 'スラビー',
           },
           x: 10.5,
           y: 20.5,
@@ -691,21 +692,21 @@ let Options = {
         kingarthro: {
           label: {
             en: 'Arthro',
-            de: 'King Arthro',
+            de: 'König Athro',
             fr: 'King Arthro',
-            ja: 'King Arthro',
+            ja: 'アースロ',
           },
           mobName: {
             en: 'King Arthro',
-            de: 'King Arthro',
+            de: 'König Athro',
             fr: 'King Arthro',
-            ja: 'King Arthro',
+            ja: 'キングアースロ',
           },
           trackerName: {
             en: 'King Arthro',
             de: 'King Arthro',
             fr: 'King Arthro',
-            ja: 'King Arthro',
+            ja: 'キングアースロ',
           },
           x: 8.0,
           y: 15.2,
@@ -714,13 +715,13 @@ let Options = {
         minotaurs: {
           label: {
             en: 'Minotaurs',
-            de: 'Minotaurs',
+            de: 'Minotauren',
             fr: 'Minotaurs',
-            ja: 'Minotaurs',
+            ja: 'ミノタウロス',
           },
           mobName: {
             en: 'Mindertaur',
-            de: 'Mindertaur',
+            de: 'niederer Minotaurus',
             fr: 'Mindertaur',
             ja: 'Mindertaur',
           },
@@ -728,7 +729,7 @@ let Options = {
             en: 'Minotaurs',
             de: 'Minotaurs',
             fr: 'Minotaurs',
-            ja: 'Minotaurs',
+            ja: 'ミノタウロス',
           },
           x: 13.8,
           y: 18.4,
@@ -736,21 +737,21 @@ let Options = {
         holycow: {
           label: {
             en: 'Holy Cow',
-            de: 'Holy Cow',
+            de: 'Heilsbringer',
             fr: 'Holy Cow',
-            ja: 'Holy Cow',
+            ja: '聖牛',
           },
           mobName: {
             en: 'Holy Cow',
-            de: 'Holy Cow',
+            de: 'Heilsbringer',
             fr: 'Holy Cow',
-            ja: 'Holy Cow',
+            ja: 'エウレカの聖牛',
           },
           trackerName: {
             en: 'Holy Cow',
             de: 'Holy Cow',
             fr: 'Holy Cow',
-            ja: 'Holy Cow',
+            ja: 'エウレカの聖牛',
           },
           x: 26,
           y: 16,
@@ -760,19 +761,19 @@ let Options = {
             en: 'Hadha',
             de: 'Hadhayosh',
             fr: 'Hadhayosh',
-            ja: 'Hadhayosh',
+            ja: 'ハダヨッシュ',
           },
           mobName: {
             en: 'Hadhayosh',
             de: 'Hadhayosh',
             fr: 'Hadhayosh',
-            ja: 'Hadhayosh',
+            ja: 'ハダヨッシュ',
           },
           trackerName: {
             en: 'Hadhayosh',
             de: 'Hadhayosh',
             fr: 'Hadhayosh',
-            ja: 'Hadhayosh',
+            ja: 'ハダヨッシュ',
           },
           weather: 'Thunder',
           x: 30,
@@ -783,19 +784,19 @@ let Options = {
             en: 'Horus',
             de: 'Horus',
             fr: 'Horus',
-            ja: 'Horus',
+            ja: 'ホルス',
           },
           mobName: {
             en: 'Horus',
             de: 'Horus',
             fr: 'Horus',
-            ja: 'Horus',
+            ja: 'ホルス',
           },
           trackerName: {
             en: 'Horus',
             de: 'Horus',
             fr: 'Horus',
-            ja: 'Horus',
+            ja: 'ホルス',
           },
           weather: 'Heat Waves',
           x: 26,
@@ -806,19 +807,19 @@ let Options = {
             en: 'Mainyu',
             de: 'Mainyu',
             fr: 'Mainyu',
-            ja: 'Mainyu',
+            ja: 'マンユ',
           },
           mobName: {
             en: 'Arch Angra Mainyu',
-            de: 'Arch Angra Mainyu',
+            de: 'Erz-Angra Mainyu',
             fr: 'Arch Angra Mainyu',
-            ja: 'Arch Angra Mainyu',
+            ja: 'アーチ・アンラ・マンユ',
           },
           trackerName: {
             en: 'Mainyu',
             de: 'Mainyu',
             fr: 'Mainyu',
-            ja: 'Mainyu',
+            ja: 'マンユ',
           },
           x: 25,
           y: 24,
@@ -828,19 +829,19 @@ let Options = {
             en: 'Cassie',
             de: 'Cassie',
             fr: 'Cassie',
-            ja: 'Cassie',
+            ja: 'キャシ',
           },
           mobName: {
             en: 'Copycat Cassie',
-            de: 'Copycat Cassie',
+            de: 'Kopierende Cassie',
             fr: 'Copycat Cassie',
-            ja: 'Copycat Cassie',
+            ja: 'コピーキャット・キャシー',
           },
           trackerName: {
             en: 'Cassie',
             de: 'Cassie',
             fr: 'Cassie',
-            ja: 'Cassie',
+            ja: 'キャシ',
           },
           weather: 'Blizzards',
           x: 22,
@@ -851,22 +852,420 @@ let Options = {
             en: 'Louhi',
             de: 'Louhi',
             fr: 'Louhi',
-            ja: 'Louhi',
+            ja: 'ロウヒ',
           },
           mobName: {
             en: 'Louhi',
             de: 'Louhi',
             fr: 'Louhi',
-            ja: 'Louhi',
+            ja: 'ロウヒ',
           },
           trackerName: {
             en: 'Louhi',
             de: 'Louhi',
             fr: 'Louhi',
-            ja: 'Louhi',
+            ja: 'ロウヒ',
           },
           x: 36,
           y: 18.5,
+          time: 'Night',
+        },
+      },
+    },
+
+    'Eureka Pyros': {
+      mapImage: 'pyros.png',
+      mapWidth: 1350,
+      mapHeight: 1450,
+      shortName: 'pyros',
+      mapToPixelXScalar: 42.515,
+      mapToPixelXConstant: -344.064,
+      mapToPixelYScalar: 42.486,
+      mapToPixelYConstant: -202.628,
+      entityToMapXScalar: 0.02,
+      entityToMapXConstant: 21.48,
+      entityToMapYScalar: 0.02,
+      entityToMapYConstant: 21.48,
+      nms: {
+        luecosia: {
+          label: {
+            en: 'Leuco',
+            de: 'Leuco',
+            fr: 'Leuco',
+            ja: 'レウコ',
+          },
+          mobName: {
+            en: 'Leucosia',
+            de: 'Leucosia',
+            fr: 'Leucosia',
+            ja: 'レウコシアー',
+          },
+          trackerName: {
+            en: 'Leucosia',
+            de: 'Leucosia',
+            fr: 'Leucosia',
+            ja: 'レウコ',
+          },
+          x: 26.8,
+          y: 26.3,
+          time: 'Night',
+        },
+        flauros: {
+          label: {
+            en: 'Flauros',
+            de: 'Flauros',
+            fr: 'Flauros',
+            ja: 'フラウロス',
+          },
+          mobName: {
+            en: 'Flauros',
+            de: 'Flauros',
+            fr: 'Flauros',
+            ja: 'フラウロス',
+          },
+          trackerName: {
+            en: 'Flauros',
+            de: 'Flauros',
+            fr: 'Flauros',
+            ja: 'フラウロス',
+          },
+          x: 28.9,
+          y: 29.2,
+        },
+        sophist: {
+          label: {
+            en: 'Sophist',
+            de: 'Sophist',
+            fr: 'Sophist',
+            ja: 'ソフィスト',
+          },
+          mobName: {
+            en: 'The Sophist',
+            de: 'The Sophist',
+            fr: 'The Sophist',
+            ja: 'ソフィスト',
+          },
+          trackerName: {
+            en: 'Sophist',
+            de: 'Sophist',
+            fr: 'Sophist',
+            ja: 'ソフィスト',
+          },
+          x: 31.8,
+          y: 31.0,
+        },
+        graff: {
+          label: {
+            en: 'Graff',
+            de: 'Graff',
+            fr: 'Graff',
+            ja: 'グラフアカネ',
+          },
+          mobName: {
+            en: 'Graffiacane',
+            de: 'Graffiacane',
+            fr: 'Graffiacane',
+            ja: 'グラッフアカーネ',
+          },
+          trackerName: {
+            en: 'Graff',
+            de: 'Graff',
+            fr: 'Graff',
+            ja: 'グラフアカネ',
+          },
+          x: 23.5,
+          y: 37.2,
+        },
+        askala: {
+          label: {
+            en: 'Askala',
+            de: 'Askala',
+            fr: 'Askala',
+            ja: 'アスカラ',
+          },
+          mobName: {
+            en: 'Askalaphos',
+            de: 'Askalaphos',
+            fr: 'Askalaphos',
+            ja: 'アスカラポス',
+          },
+          trackerName: {
+            en: 'Askala',
+            de: 'Askala',
+            fr: 'Askala',
+            ja: 'アスカラ',
+          },
+          x: 19.3,
+          y: 29.0,
+          weather: 'Umbral Wind',
+        },
+        batym: {
+          label: {
+            en: 'Batym',
+            de: 'Batym',
+            fr: 'Batym',
+            ja: 'パティム',
+          },
+          mobName: {
+            en: 'Grand Duke Batym',
+            de: 'Grand Duke Batym',
+            fr: 'Grand Duke Batym',
+            ja: 'グランドデューク・パティム',
+          },
+          trackerName: {
+            en: 'Duke Batym',
+            de: 'Duke Batym',
+            fr: 'Duke Batym',
+            ja: 'デュークパティム',
+          },
+          x: 18.0,
+          y: 14.1,
+          time: 'Night',
+        },
+        aetolus: {
+          label: {
+            en: 'Aetolus',
+            de: 'Aetolus',
+            fr: 'Aetolus',
+            ja: 'アイトロス',
+          },
+          mobName: {
+            en: 'Aetolus',
+            de: 'Aetolus',
+            fr: 'Aetolus',
+            ja: 'アイトロス',
+          },
+          trackerName: {
+            en: 'Aetolus',
+            de: 'Aetolus',
+            fr: 'Aetolus',
+            ja: 'アイトロス',
+          },
+          x: 10.0,
+          y: 14.0,
+        },
+        lesath: {
+          label: {
+            en: 'Lesath',
+            de: 'Lesath',
+            fr: 'Lesath',
+            ja: 'レサト',
+          },
+          mobName: {
+            en: 'Lesath',
+            de: 'Lesath',
+            fr: 'レサト',
+            ja: 'Lesath',
+          },
+          trackerName: {
+            en: 'Lesath',
+            de: 'Lesath',
+            fr: 'Lesath',
+            ja: 'レサト',
+          },
+          x: 13.2,
+          y: 11.2,
+        },
+        eldthurs: {
+          label: {
+            en: 'Eldthurs',
+            de: 'Eldthurs',
+            fr: 'Eldthurs',
+            ja: 'エルドスルス',
+          },
+          mobName: {
+            en: 'Eldthurs',
+            de: 'Eldthurs',
+            fr: 'Eldthurs',
+            ja: 'エルドスルス',
+          },
+          trackerName: {
+            en: 'Eldthurs',
+            de: 'Eldthurs',
+            fr: 'Eldthurs',
+            ja: 'エルドスルス',
+          },
+          x: 15.3,
+          y: 6.8,
+        },
+        iris: {
+          label: {
+            en: 'Iris',
+            de: 'Iris',
+            fr: 'Iris',
+            ja: 'イリス',
+          },
+          mobName: {
+            en: 'Iris',
+            de: 'Iris',
+            fr: 'Iris',
+            ja: 'イリス',
+          },
+          trackerName: {
+            en: 'Iris',
+            de: 'Iris',
+            fr: 'Iris',
+            ja: 'イリス',
+          },
+          x: 21.3,
+          y: 12.0,
+        },
+        lamebrix: {
+          label: {
+            en: 'Lamebrix',
+            de: 'Lamebrix',
+            fr: 'Lamebrix',
+            ja: 'レイムプリクス',
+          },
+          mobName: {
+            en: 'Lamebrix Strikebocks',
+            de: 'Lamebrix Strikebocks',
+            fr: 'Lamebrix Strikebocks',
+            ja: '傭兵のレイムプリクス',
+          },
+          trackerName: {
+            en: 'Lamebrix',
+            de: 'Lamebrix',
+            fr: 'Lamebrix',
+            ja: 'レイムプリクス',
+          },
+          x: 21.9,
+          y: 8.3,
+        },
+        dux: {
+          label: {
+            en: 'Dux',
+            de: 'Dux',
+            fr: 'Dux',
+            ja: 'ドゥクス',
+          },
+          mobName: {
+            en: 'Dux',
+            de: 'Dux',
+            fr: 'Dux',
+            ja: 'ライトニング・ドゥクス',
+          },
+          trackerName: {
+            en: 'Dux',
+            de: 'Dux',
+            fr: 'Dux',
+            ja: 'ドゥクス',
+          },
+          x: 27.4,
+          y: 8.8,
+          weather: 'Thunder',
+        },
+        jack: {
+          label: {
+            en: 'Jack',
+            de: 'Jack',
+            fr: 'Jack',
+            ja: 'ジャック',
+          },
+          mobName: {
+            en: 'The Weeping Willow',
+            de: 'Lumber Jack',
+            fr: 'Lumber Jack',
+            ja: 'ランバージャック・デスマッチ',
+          },
+          trackerName: {
+            en: 'Jack',
+            de: 'Jack',
+            fr: 'Jack',
+            ja: 'ランバージャック',
+          },
+          x: 30.1,
+          y: 11.7,
+        },
+        glauko: {
+          label: {
+            en: 'Glauko',
+            de: 'Glauko',
+            fr: 'Glauko',
+            ja: 'グラウコピス',
+          },
+          mobName: {
+            en: 'Glaukopis',
+            de: 'Glaukopis',
+            fr: 'Glaukopis',
+            ja: 'グラウコピス',
+          },
+          trackerName: {
+            en: 'Glaukopis',
+            de: 'Glaukopis',
+            fr: 'Glaukopis',
+            ja: 'グラウコピス',
+          },
+          x: 32.3,
+          y: 15.1,
+        },
+        yingyang: {
+          label: {
+            en: 'Ying-Yang',
+            de: 'Ying-Yang',
+            fr: 'Ying-Yang',
+            ja: 'イン・ヤン',
+          },
+          mobName: {
+            en: 'Ying-Yang',
+            de: 'Ying-Yang',
+            fr: 'Ying-Yang',
+            ja: 'イン・ヤン',
+          },
+          trackerName: {
+            en: 'Ying-Yang',
+            de: 'Ying-Yang',
+            fr: 'Ying-Yang',
+            ja: 'インヤン',
+          },
+          x: 11.4,
+          y: 34.1,
+        },
+        skoll: {
+          label: {
+            en: 'Skoll',
+            de: 'Skoll',
+            fr: 'Skoll',
+            ja: 'スコル',
+          },
+          mobName: {
+            en: 'Skoll',
+            de: 'Skoll',
+            fr: 'Skoll',
+            ja: 'スコル',
+          },
+          trackerName: {
+            en: 'Skoll',
+            de: 'Skoll',
+            fr: 'Skoll',
+            ja: 'スコル',
+          },
+          x: 24.3,
+          y: 30.1,
+          weather: 'Blizzards',
+        },
+        penthe: {
+          label: {
+            en: 'Penthe',
+            de: 'Penthe',
+            fr: 'Penthe',
+            ja: 'ペンテ',
+          },
+          mobName: {
+            en: 'Penthesilea',
+            de: 'Penthesilea',
+            fr: 'Penthesilea',
+            ja: 'ペンテシレイア',
+          },
+          trackerName: {
+            en: 'Penthesilea',
+            de: 'Penthesilea',
+            fr: 'Penthesilea',
+            ja: 'ペンテ',
+          },
+          x: 35.7,
+          y: 5.9,
+          weather: 'Heat Waves',
         },
       },
     },
@@ -874,7 +1273,7 @@ let Options = {
 };
 
 let gFlagRegex = Regexes.Parse(/00:00..:(.*)Eureka (?:Anemos|Pagos|Pyros) \( (\y{Float})\s*, (\y{Float}) \)(.*$)/);
-let gTrackerRegex = Regexes.Parse(/(?:https:\/\/)?ffxiv-eureka\.com\/(\S*)\/?/);
+let gTrackerRegex = Regexes.Parse(/(?:https:\/\/)?ffxiv-eureka\.com\/(?!maps\/)(\S*)\/?/);
 let gImportRegex = Regexes.Parse(/00:00..:(.*)NMs on cooldown: (\S.*\))/);
 let gWeatherIcons = {
   'Gales': '&#x1F300;',
@@ -882,9 +1281,12 @@ let gWeatherIcons = {
   'Blizzards': '&#x2744;',
   'Thunder': '&#x26A1;',
   'Heat Waves': '&#x2600;',
+  'Umbral Wind': '&#x1F300;',
+  'Fair Skies': '&#x26C5;',
+  'Snow': '&#x26C4;',
 };
 let gNightIcon = '&#x1F319;';
-let gDayIcon = '&#x2600;';
+let gDayIcon = '&#x263C;';
 
 let gTracker;
 class EurekaTracker {
@@ -973,10 +1375,17 @@ class EurekaTracker {
 
   OnZoneChange(e) {
     this.zoneName = e.detail.zoneName.replace('The Forbidden Land, ', '');
+    this.zoneName = this.zoneName.replace('Unknown Zone (31B)', 'Eureka Pyros');
     this.zoneInfo = this.options.ZoneInfo[this.zoneName];
     let container = document.getElementById('container');
     if (this.zoneInfo) {
       this.ResetZone();
+
+      let aspect = document.getElementById('aspect-ratio');
+      while (aspect.classList.length > 0)
+        aspect.classList.remove(aspect.classList.item(0));
+      aspect.classList.add('aspect-ratio-' + this.zoneInfo.shortName);
+
       document.getElementById('map-image').src = this.zoneInfo.mapImage;
       this.InitNMs();
       this.UpdateTimes();
@@ -1028,32 +1437,64 @@ class EurekaTracker {
   UpdateTimes() {
     let nowMs = +new Date();
 
-    for (let i = 0; i < 5; ++i) {
-      let primaryWeather = this.options.ZoneInfo[this.zoneName].primaryWeather[i];
-      if (!primaryWeather) {
-        document.getElementById('label-weather' + i).innerHTML = '';
-        continue;
-      }
-      let weatherStr = gWeatherIcons[primaryWeather];
-      let weather = getWeather(nowMs, this.zoneName);
-      if (weather == primaryWeather) {
-        let stopTime = findNextWeatherNot(nowMs, this.zoneName, primaryWeather);
-        if (stopTime) {
-          let min = (stopTime - nowMs) / 1000 / 60;
-          weatherStr += ' for ' + Math.ceil(min) + 'm';
-        } else {
-          weatherStr += ' for ???';
+    let primaryWeatherList = this.options.ZoneInfo[this.zoneName].primaryWeather;
+    if (primaryWeatherList) {
+      for (let i = 0; i < 5 && i < primaryWeatherList.length; ++i) {
+        let primaryWeather = primaryWeatherList[i];
+        if (!primaryWeather) {
+          document.getElementById('label-weather' + i).innerHTML = '';
+          continue;
         }
+        let weatherStr = gWeatherIcons[primaryWeather];
+        let weather = getWeather(nowMs, this.zoneName);
+        if (weather == primaryWeather) {
+          let stopTime = findNextWeatherNot(nowMs, this.zoneName, primaryWeather);
+          if (stopTime) {
+            let min = (stopTime - nowMs) / 1000 / 60;
+            weatherStr += ' for ' + Math.ceil(min) + 'm';
+          } else {
+            weatherStr += ' for ???';
+          }
+        } else {
+          let startTime = findNextWeather(nowMs, this.zoneName, primaryWeather);
+          if (startTime) {
+            let min = (startTime - nowMs) / 1000 / 60;
+            weatherStr += ' in ' + Math.ceil(min) + 'm';
+          } else {
+            weatherStr += ' in ???';
+          }
+        }
+        document.getElementById('label-weather' + i).innerHTML = weatherStr;
+      }
+    } else {
+      let currentWeather = getWeather(nowMs, this.zoneName);
+      let weatherStr = gWeatherIcons[currentWeather];
+      let stopTime = findNextWeatherNot(nowMs, this.zoneName, currentWeather);
+      if (stopTime) {
+        let min = (stopTime - nowMs) / 1000 / 60;
+        weatherStr += ' for ' + Math.ceil(min) + 'm';
       } else {
-        let startTime = findNextWeather(nowMs, this.zoneName, primaryWeather);
+        weatherStr += ' for ???';
+      }
+      document.getElementById('label-weather0').innerHTML = weatherStr;
+
+      // round up current time
+      let lastTime = nowMs;
+      let lastWeather = currentWeather;
+      for (let i = 1; i < 5; ++i) {
+        let startTime = findNextWeatherNot(lastTime, this.zoneName, lastWeather);
+        let weather = getWeather(startTime + 1, this.zoneName);
+        let weatherStr = gWeatherIcons[weather];
         if (startTime) {
           let min = (startTime - nowMs) / 1000 / 60;
           weatherStr += ' in ' + Math.ceil(min) + 'm';
         } else {
           weatherStr += ' in ???';
         }
+        document.getElementById('label-weather' + i).innerHTML = weatherStr;
+        lastTime = startTime;
+        lastWeather = weather;
       }
-      document.getElementById('label-weather' + i).innerHTML = weatherStr;
     }
 
     let nextDay = findNextNight(nowMs);
@@ -1150,7 +1591,7 @@ class EurekaTracker {
     }
 
     let regex = Regexes.Parse(/(.*) \((\d*)m\)/);
-    let importList = importText.split(' > ');
+    let importList = importText.split(' → ');
     for (let i = 0; i < importList.length; i++) {
       let m = importList[i].match(regex);
       if (!m) {

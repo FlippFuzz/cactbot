@@ -140,17 +140,19 @@
         if (data.primordialCrust) {
           return {
             en: 'Die on Front/Back -> Sides',
-            de: 'Vorne/Hinten -> Seiten',
+            de: 'Stirb Vorne/Hinten -> Seiten',
             fr: 'Devant/Derrière puis Côtés',
           };
         }
       },
       infoText: function(data) {
-        return {
-          en: 'Sides -> Front/Back',
-          de: 'Seiten -> Vorne/Hinten',
-          fr: 'Côtés puis Devant/Derrière',
-        };
+        if (!data.primordialCrust) {
+          return {
+            en: 'Sides -> Front/Back',
+            de: 'Seiten -> Vorne/Hinten',
+            fr: 'Côtés puis Devant/Derrière',
+          };
+        }
       },
       tts: function(data) {
         if (data.primordialCrust) {
@@ -166,9 +168,6 @@
           fr: 'aller sur les cotés',
         };
       },
-      run: function(data) {
-        delete data.primordialCrust;
-      },
     },
     {
       id: 'O9S Latitudinal Implosion',
@@ -180,17 +179,19 @@
         if (data.primordialCrust) {
           return {
             en: 'Die on Sides -> Front/Back',
-            de: 'Vorne/Hinten -> Seiten',
+            de: 'Stirb an Seiten -> Vorne/Hinten',
             fr: 'Devant/Derrière puis Côtés',
           };
         }
       },
       infoText: function(data) {
-        return {
-          en: 'Front/Back -> Sides',
-          de: 'Vorne/Hinten -> Seiten',
-          fr: 'Devant/Derrière puis Côtés',
-        };
+        if (!data.primordialCrust) {
+          return {
+            en: 'Front/Back -> Sides',
+            de: 'Vorne/Hinten -> Seiten',
+            fr: 'Devant/Derrière puis Côtés',
+          };
+        }
       },
       tts: function(data) {
         if (data.primordialCrust) {
@@ -205,9 +206,6 @@
           de: 'hinten dran',
           fr: 'aller derrière',
         };
-      },
-      run: function(data) {
-        delete data.primordialCrust;
       },
     },
     {
@@ -297,14 +295,14 @@
           return {
             en: 'Spread and Stay',
             de: 'Verteilen und bleiben',
-            fr: 'Ecartez-vous et rester',
+            fr: 'Ecartez-vous et restez',
           };
         }
         // DPS entropy #2
         return {
           en: 'Stack and Stay Out',
           de: 'Stack und Bleiben',
-          fr: 'Empiler et rester',
+          fr: 'Packez-vous et restez',
         };
       },
     },
@@ -378,7 +376,7 @@
       infoText: {
         en: 'Stack Donut',
         de: 'Sammeln Donut',
-        fr: 'Empiler Donut',
+        fr: 'Packez-vous',
       },
     },
     {
@@ -396,7 +394,7 @@
       infoText: {
         en: 'Stack Donut',
         de: 'Sammeln Donut',
-        fr: 'Empiler Donut',
+        fr: 'Packez-vous',
       },
     },
     {
@@ -414,7 +412,7 @@
       infoText: {
         en: 'Stack Donut',
         de: 'Sammeln Donut',
-        fr: 'Empiler Donut',
+        fr: 'Packez-vous',
       },
     },
     {
@@ -428,13 +426,13 @@
           return {
             en: 'Drop Outside',
             de: 'Gehe Nord / Süd',
-            fr: 'Aller Nord / Sud',
+            fr: 'Allez au Nord/Sud',
           };
         } else if (data.phaseType == 'wind') {
           return {
             en: 'Drop Outside + Knockback',
             de: 'Geh nächste Ecke nah am Tornado',
-            fr: 'Aller au prochain coin près du Tornade',
+            fr: 'Déposez dans les coins',
           };
         }
       },
@@ -489,14 +487,14 @@
           return {
             en: 'Back to Tornado',
             de: 'Rücken zum Tornado',
-            fr: 'Se détourner de la tornade',
+            fr: 'Regardez vers l\'extérieur',
           };
         }
         if (data.wind == 'tail') {
           return {
             en: 'Face the Tornado',
             de: 'Zum Tornado hin',
-            fr: 'Se tourner vers la tornade',
+            fr: 'Regardez la tornade',
           };
         }
       },
@@ -532,7 +530,7 @@
           return {
             en: 'Heal All to Full',
             de: 'Alle vollheilen',
-            fr: 'Soignez vie pleine tout le monde',
+            fr: 'Soignez tout le monde full vie',
           };
         }
         return {
@@ -551,15 +549,29 @@
       condition: function(data, matches) {
         return data.me == matches[1] && data.phaseType != 'orb';
       },
-      preRun: function(data, matches) {
-        data.primordialCrust = true;
-      },
       infoText: function(data) {
         return {
           en: 'Die on next mechanic',
           de: 'An nächster Mechanik tödlichen Schaden nehmen',
           fr: 'Mourrez sur la prochaine mécanique',
         };
+      },
+      run: function(data, matches) {
+        data.primordialCrust = true;
+      },
+    },
+    {
+      // Primordial Crust Cleanup
+      regex: /:(\y{Name}) gains the effect of (?:Unknown_645|Primordial Crust)/,
+      regexDe: /:(\y{Name}) gains the effect of (?:Unknown_645|Chaoserde)/,
+      regexFr: /:(\y{Name}) gains the effect of (?:Unknown_645|Terre du chaos)/,
+      regexJa: /:(\y{Name}) gains the effect of (?:Unknown_645|混沌の土)/,
+      condition: function(data, matches) {
+        return data.me == matches[1];
+      },
+      delaySeconds: 30,
+      run: function(data, matches) {
+        delete data.primordialCrust;
       },
     },
     {
@@ -570,7 +582,7 @@
         return {
           en: 'Stack with partner',
           de: 'Stacks verteilen',
-          fr: 'Ecartez-vous et empiler',
+          fr: 'Packez-vous en binôme',
         };
       },
     },
@@ -628,7 +640,7 @@
         return {
           en: 'Hit DPS with Water',
           de: 'töte deinen DPS',
-          fr: 'tuez votre DPS',
+          fr: 'Tuez les DPS',
         };
       },
 	  tts: function(data) {
