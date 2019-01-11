@@ -90,6 +90,7 @@ namespace Cactbot {
         maxCP = e.max_cp;
         pos = new Point3F(e.pos_x, e.pos_y, e.pos_z);
         jobDetail = null;
+        bait = e.bait;
         debugJob = e.debugJob;
       }
       public string EventName() { return "onPlayerChangedEvent"; }
@@ -112,6 +113,7 @@ namespace Cactbot {
       public string debugJob;
 
       public Point3F pos;
+      public int bait;
 
       // One of the FooJobDetails structures, depending on the value of |job|.
       public object jobDetail;
@@ -226,6 +228,14 @@ namespace Cactbot {
         public int spreadCard;
         public int roadCard;
         public int arcanumCard;
+      }
+
+      public struct SamuraiDetail {
+        public SamuraiDetail(FFXIVProcess.SamuraiJobData d) { kenki = d.kenki; setsu = d.setsu; gekko = d.gekko; ka = d.ka; }
+        public int kenki;
+        public bool setsu;
+        public bool gekko;
+        public bool ka;
       }
     }
 
