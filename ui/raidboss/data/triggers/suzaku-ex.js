@@ -1,9 +1,9 @@
 'use strict';
 
-// Suzaku Extreme
+// Seiryu Extreme
 [{
   zoneRegex: /^Hells\' Kier \(Extreme\)$/,
-  timelineFile: 'suzaku-ex.txt',
+  timelineFile: 'seiryu-ex.txt',
   triggers: [
     {
       id: 'SuzEx Cremate',
