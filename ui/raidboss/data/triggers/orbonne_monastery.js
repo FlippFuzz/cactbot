@@ -497,7 +497,7 @@
       regexFr: / 14:374C:Cid le Dieu de la Foudre starts using/,
       alertText: {
         // e.g. E / NE / NW platforms
-        en: 'Run right to avoid swords',
+        en: 'Rotate right',
         de: 'Im Uhrzeigersinn ausweichen',
         fr: 'Evitez les épées dans le sens anti-horaire',
       },
@@ -509,7 +509,7 @@
       regexFr: / 14:374D:Cid le Dieu de la Foudre starts using/,
       alertText: {
         // NW / NE / E platforms
-        en: 'Run left to avoid swords',
+        en: 'Rotate left',
         de: 'Schwertern im Uhrzeigersinn ausweichen',
         fr: 'Evitez les épées dans le sens horaire',
       },
@@ -587,9 +587,9 @@
     },
     {
       id: 'Orbonne Ultima Extreme Edge',
-      regex: / 14:38DB:Demi-Hashmal starts using Extreme Edge/,
-      regexDe: / 14:38DB:Demi-Hashmal starts using Extremkante/,
-      regexFr: / 14:38DB:Demi-Hashmal starts using Taille Suprême/,
+      regex: / 14:38DA:Demi-Hashmal starts using Extreme Edge/,
+      regexDe: / 14:38DA:Demi-Hashmal starts using Extremkante/,
+      regexFr: / 14:38DA:Demi-Hashmal starts using Taille Suprême/,
       alertText: {
         en: 'Look for Hashmal dash',
         de: 'Nach Hashmal-Dash ausschau halten',
@@ -824,8 +824,8 @@
         'Dark Crusader': 'Conquérant sombre',
         'Dominion': 'Dominion',
         '..is no longer sealed': 'Ouverture du',
-        'The Realm of the Templars will be sealed off': 'The Realm of the Templars will be sealed off',
-        'The Realm of the Machinists will be sealed off': 'The Realm of the Machinists will be sealed off',
+        'The Realm of the Templars will be sealed off': 'Fermeture du cloître de la chevalière sacrée',
+        'The Realm of the Machinists will be sealed off': 'Fermeture du cloître de l\'ingénieur',
         'The lifeless alley will be sealed off': 'Fermeture des corridors silencieux',
         'The Realm of the Thunder God will be sealed off': 'Fermeture du cloître du Dieu de la Foudre',
         'The Crystalline Gaol will be sealed off': 'Fermeture de la Geôle cristalline',
