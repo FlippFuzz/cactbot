@@ -265,7 +265,12 @@ class Timeline {
 
   SyncTo(fightNow) {
     // This records the actual time which aligns with "0" in the timeline.
-    this.timebase = new Date(new Date() - fightNow * 1000);
+    let newTimebase = new Date(new Date() - fightNow * 1000);
+    // Skip syncs that are too close.  Many syncs happen on abilities that
+    // hit 8 to 24 people, and so this is a lot of churn.
+    if (Math.abs(newTimebase - this.timebase) <= 2)
+      return;
+    this.timebase = newTimebase;
 
     this.nextEvent = 0;
     this.nextText = 0;
@@ -276,7 +281,16 @@ class Timeline {
     this._AdvanceTimeTo(fightNow);
     this._CollectActiveSyncs(fightNow);
 
-    this._ClearTimers();
+    // Clear all timers except any synthetic duration events.
+    // This is because if the sync goes even a hair into the future, then
+    // the duration ending event will get dropped here.
+
+    // FIXME: we could be smarter here and know ahead of time where all the duration
+    // events are, so that we could skip ahead into the future where a duration
+    // event has started but not expired and have that work properly.
+    this._AddDurationTimers(fightNow);
+    this._ClearExceptRunningDurationTimers(fightNow);
+
     this._AddUpcomingTimers(fightNow);
     this._CancelUpdate();
     this._ScheduleUpdate(fightNow);
@@ -332,6 +346,20 @@ class Timeline {
     this.activeEvents = [];
   }
 
+  _ClearExceptRunningDurationTimers(fightNow) {
+    let durationEvents = [];
+    for (let i = 0; i < this.activeEvents.length; ++i) {
+      if (this.activeEvents[i].isDur && this.activeEvents[i].time > fightNow) {
+        durationEvents.push(this.activeEvents[i]);
+        continue;
+      }
+      if (this.removeTimerCallback)
+        this.removeTimerCallback(this.activeEvents[i], false);
+    }
+
+    this.activeEvents = durationEvents;
+  }
+
   _RemoveExpiredTimers(fightNow) {
     while (this.activeEvents.length && this.activeEvents[0].time <= fightNow) {
       if (this.removeTimerCallback)
@@ -352,6 +380,7 @@ class Timeline {
           sortKey: e.sortKey,
           name: e.name,
           text: 'Active: ' + e.text,
+          isDur: true,
         };
         events.push(durationEvent);
         this.activeEvents.splice(i, 1);
