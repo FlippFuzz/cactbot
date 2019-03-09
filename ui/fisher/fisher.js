@@ -67,7 +67,7 @@ class Fisher {
         'quit': /00:08c3:(?:Du hast das Fischen beendet\.|Das Fischen wurde abgebrochen)/,
       },
       'en': {
-        'cast': /00:08c3:You cast your line (?:on|in|at) (?:the )?([\w\s]+)\./,
+        'cast': /00:08c3:You cast your line (?:on|in|at) (?:the )?([\w\s']+)\./,
         'bite': /00:08c3:Something bites!/,
         'catch': /00:0843:You land (?:a|an|[\d]+ )?.+?([\w\s\-\'\#\d]{3,})(?: | [^\w] |[^\w\s].+ )measuring \d/,
         'nocatch': /00:08c3:(Nothing bites\.|You reel in your line|You lose your bait|The fish gets away|You lose your |Your line breaks|The fish sense something amiss|You cannot carry any more)/,
@@ -79,9 +79,9 @@ class Fisher {
         'quit': /00:08c3:(?:You put away your rod\.|Fishing canceled)/,
       },
       'fr': {
-        'cast': /00:08c3:Vous commencez \u00e0 p\u00eacher. Point de p\u00eache: ([\w\s\'\u00c0-\u017f]+)/,
+        'cast': /00:08c3:Vous commencez \u00e0 p\u00eacher. Point de p\u00eache: ([\w\s\'\(\)\u00c0-\u017f]+)/,
         'bite': /00:08c3:Vous avez une touche!/,
-        'catch': /00:0843:Vous avez p\u00each\u00e9 (?:un )?.+?\s?([\w\s\-\'\u00b0\u00c0-\u017f]{3,})\ue03c?.+de \d/,
+        'catch': /00:0843:Vous avez p\u00each\u00e9 (?:un |une )?.+?\s?([\w\s\-\'\u00b0\u00c0-\u017f]{3,})\ue03c?.+de \d/,
         'nocatch': /00:08c3:(?:L'app\u00e2t a disparu|Vous avez perdu votre|L'app\u00e2t a disparu|Le poisson a r\u00e9ussi \u00e0 se d\u00e9faire de l'hame\u00e7on|Le fil s'est cass\u00e9|Vous n'avez pas eu de touche|Vous n'avez pas r\u00e9ussi \u00e0 ferrer le poisson|Vous arr\u00eatez de p\u00eacher|Le poisson s'est enfui et a emport\u00e9 avec lui votre|Les poissons sont devenus m\u00e9fiants|Vous avez p\u00each\u00e9 .+, mais ne pouvez en poss\u00e9der davantage et l'avez donc rel\u00e2ch\u00e9)/,
         'mooch': /00:08c3:Vous essayez de p\u00eacher au vif avec/,
         'quit': /00:08c3:(?:Vous arr\u00eatez de p\u00eacher\.|P\u00eache interrompue)/,
@@ -197,16 +197,18 @@ class Fisher {
     this.lastCatch = this.seaBase.getFish(fish);
     this.fishing = false;
 
-    this.seaBase.addCatch({
-      'fish': this.lastCatch.id,
-      'bait': this.getActiveBait().id,
-      'place': this.place.id,
-      'castTimestamp': +this.castStart,
-      'hookTime': (this.castEnd - this.castStart),
-      'reelTime': (this.castGet - this.castEnd),
-      'chum': this.chum?1:0,
-      'snagging': this.snagging,
-    });
+    if (this.place) {
+      this.seaBase.addCatch({
+        'fish': this.lastCatch.id,
+        'bait': this.getActiveBait().id,
+        'place': this.place.id,
+        'castTimestamp': +this.castStart,
+        'hookTime': (this.castEnd - this.castStart),
+        'reelTime': (this.castGet - this.castEnd),
+        'chum': this.chum?1:0,
+        'snagging': this.snagging,
+      });
+    }
 
     if (this.mooching) {
       this.handleBait(this.baseBait);
