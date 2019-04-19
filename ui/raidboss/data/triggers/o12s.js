@@ -5,6 +5,32 @@
 [{
   zoneRegex: /^Alphascape V4.0 \(Savage\)$/,
   timelineFile: 'o12s.txt',
+  timelineTriggers: [
+	{
+      id: 'O12S - Synthetic Shield',
+      regex: /Synthetic Shield/,
+	  alertText: {
+        en: 'Shield Pattern',
+      },
+      tts: function(data) {
+		return {
+	      en: 'Shield Pattern',
+		};
+      },
+    },
+	{
+      id: 'O12S - Synthetic Blades',
+      regex: /Synthetic Blades/,
+	  alertText: {
+        en: 'Blade Pattern',
+      },
+      tts: function(data) {
+		return {
+	      en: 'Blade Pattern',
+		};
+      },
+    },
+  ],
   triggers: [
     {
       // Track Omega MF vs Final Omega phase.

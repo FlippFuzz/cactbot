@@ -8,7 +8,7 @@ hideall "--sync--"
 
 0.0 "Start" sync /0044:I am the Omega/ window 1,0
 2.4 "--sync--" sync /:Omega-M:337D:/ window 3,0.5 # first auto
-11.7 "Synthetic Shield" sync /:Omega-M:32FD:/
+11.7 "Synthetic Shield." sync /:Omega-M:32FD:/
 19.7 "Suppression" sync /:Omega-M:3345:/
 26.6 "Beyond Defense" sync /:Omega-M:332B:/
 26.7 "Optical Laser" sync /:Optical Unit:3347:/
@@ -18,7 +18,7 @@ hideall "--sync--"
 # F phase
 49.1 "Subject Simulation F" sync /:Omega-M:32F1:/
 61.2 "Discharger" sync /:Omega-M:3327:/ # drift -0.044
-73.2 "Synthetic Blades" sync /:Omega-M:3301:/
+73.2 "Synthetic Blades." sync /:Omega-M:3301:/
 81.2 "Advanced Suppression" sync /:Omega-M:3349:/
 87.2 "Superliminal Motion" sync /:Omega-M:3334:/
 88.2 "Advanced Optical Laser" sync /:Optical Unit:334A:/
@@ -53,7 +53,7 @@ hideall "--sync--"
 221.5 "Pile Pitch"
 228.8 "Optimized Fire III"
 
-# Defense-first path
+# Shield-First Pattern
 1200.5 "Synthetic Shield" sync /:Omega:3301:/
 1212.2 "Operational Synergy" sync /:Omega:3341:/
 1219.2 "Beyond Defense" sync /:Omega-M:332B:/
@@ -92,7 +92,7 @@ hideall "--sync--"
 1396.4 "Cosmo Memory"
 1404.4 "Laser Shower"
 
-# Blades-first path
+# Blade-First path
 2212.2 "Operational Synergy" sync /:Omega:3341:/
 2217.2 "Superliminal Steel" sync /:Omega:332F:/
 2220.2 "Optimized Blizzard III" sync /:Omega:3332:/
